@@ -1,0 +1,19 @@
+# IDEs directories and files#
+############
+nbproject/
+.project
+.idea
+
+# Bootstrap and JQuery #
+############
+public/src/bootstrap-4.1.3/
+public/src/jquery/
+
+# Private files#
+############
+
+public/src/private/vars/*.php
+public/src/private/connect_db_function.php
+
+private/config.ini
+public/img/private/

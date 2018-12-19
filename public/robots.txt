@@ -1,0 +1,10 @@
+Sitemap: http://www.orabora.net/sitemap.xml
+
+User-agent: *
+allow: /src/front/
+allow: /img/
+disallow: /src/front/error.php
+disallow: /src/front/tmpl/
+disallow: /src/game/
+disallow: /src/private/
+disallow: /src/utils/
