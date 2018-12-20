@@ -16,7 +16,7 @@ Mapa no functional. Solo las provincias gallegas pueden pincharse pero no tienen
 Las únicas provincias de las que se puede obtener información son las asturianas y cántabras. Ej:
 <a href="region.php?id=103">Provincia de Avilés</a> o <a href="region.php?id=202">Merindad de Campoo</a>. 
 Tienes una lista completa en la página del <a href="kingdom.php?id=1">Reino de Asturias</a>
-    <img src="../../../img/Mapa españa/Mapa_v1/mapa_final_v1.gif" alt="Mapa de la península ibérica" usemap="#spain_map">
+    <img src="../../img/public/mapa_norte.gif" alt="Mapa de la península ibérica" usemap="#spain_map">
 
     <map name="spain_map">
       <area shape="poly" coords="4.00,456.00 224.00,456.00 224.00,456.00

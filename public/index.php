@@ -1,4 +1,4 @@
 <?php
 
-header("location: src/front/login.php"); /* Redirect browser */
+header("location: front/login.php"); /* Redirect browser */
 exit();

@@ -1,0 +1,19 @@
+# Enable Rewriting
+RewriteEngine on
+RewriteBase /Ora-et-labora/public/
+# RewriteBase / # For the server
+
+# Restricts rewriting URLs only to paths that do not exist!
+# Great resource for testing: https://htaccess.madewithlove.be/
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+# Remove the src folder from the URL (if exists)
+RewriteRule ^(?!src/.*$)(.*)$ src/$1 [NC]
+# RewriteRule ^(?!src/.*$)(.*)$ src/$1 [NC]
+
+
+# Remove the www
+RewriteCond %{HTTP_HOST} ^www\.orabora\.net [NC]
+RewriteRule ^(.*)$ http://orabora.net/$1 [L,R=301]

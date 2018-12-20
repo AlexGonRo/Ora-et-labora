@@ -30,7 +30,7 @@ function render_content(){
 
                 Si estás aquí es que ha habido un fallo en el servidor o la página que has pedido no existe o no está disponible. No es estraño y probablemente no tengas tú la culpa. El juego se encuentra en desarrollo y estas cosas son más comunes de lo que deberían.
                 <br>
-                Prueba de nuevo o informa del error en cualquiera de los canales disponibles o enviando un mensaje al <a id="email" href="click:the.address.will.be.decrypted.by.javascript" onclick='decipher_mail(this, event);'>administrador</a>.
+                Prueba de nuevo o informa del error en cualquiera de los canales disponibles o enviando un mensaje al <a id="email" href="click:the.address.will.be.decrypted.by.javascript" onclick='decipher_mail(this, event);'>administrador del juego</a>.
             </div>
          </div>
     <?php
