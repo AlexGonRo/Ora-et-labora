@@ -22,7 +22,7 @@ function render_metainfo(){
 function render_my_js_scripts(){
     ob_start();
     ?>
-
+        <script src="js/mail_prot.js"></script>
     <?php
     return ob_get_clean();
 }
@@ -50,7 +50,7 @@ function render_content(){
             <ul>
                 <li class="py-1">El usuario acepta estos Términos y Condiciones de uso al registrarse en la plataforma.</li>
                 <li class="py-1">La propiedad de la cuenta es única e intrasferible.</li>
-                <li class="py-1">Solo se permite registrar una cuenta por usuario. En el caso de que, por cualquier motivo, dos personas quieran jugar con cuentas diferentes desde un mismo terminal o conexión a internet deben ponerse en contacto con la adminsitración del juego (<a href='mailto:administrador@orabora.net' target='_top'>administrador@orabora.net</a>). <br />
+                <li class="py-1">Solo se permite registrar una cuenta por usuario. En el caso de que, por cualquier motivo, dos personas quieran jugar con cuentas diferentes desde un mismo terminal o conexión a internet deben ponerse en contacto con la <a id="email" href="click:the.address.will.be.decrypted.by.javascript" onclick='decipher_mail(this, event);'> adminsitración del juego</a>. <br />
                     En el caso de que dicha administración permita la existencia de ambos jugadores, esta se reserva el derecho a establecer condiciones que limiten la posibilidad de interacción entre ambas cuentas.</li>
                 <li class="py-1">El uso de errores o "bugs" para beneficio propio será sancionado de acuerdo a la gravedad de la infracción.</li>
                 <li class="py-1">El uso de cualquier servicio de mensajería incluido en el juego no deberá usarse para enviar o hacer referencia a datos de caracter personal. El usuario es responsable de mantener esta información en secreto y la aplicación no garantiza el correcto tratamiento y almacenamiento de mensajes que puedan contener información sensible. Asi mismo, preguntar por cualquier dato de caracter personal puede ser sancionado por la administración del juego.</li>
@@ -71,10 +71,10 @@ function render_content(){
             <div class="indent_first_line py-1">El usuario es responsable de la veracidad de los datos suministrados. Así mismo declara ser mayor de edad o de disponer de autorización de sus padres/tutores para tratar sus datos personales.</div>
             <div class="indent_first_line py-1">Tratamos la información que nos facilita con el fin de prestar el servicio solicitado. Los datos proporcionados se conservarán mientras el jugador permanezca registrado o durante los años necesarios para cumplir con las obligaciones legales. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal.</div>
             <div class="indent_first_line py-1">Asi mismo también podremos utilizar dicha información para ofrecerle noticias o avances relacionados con el juego. </div>
-            <div class="indent_first_line py-1">Tiene derecho a obtener confirmación sobre si en <b><i>Ora et Labora</i></b> estamos tratando sus datos personales, asi como derecho a acceder a ellos, rectificar los datos inexactos o solicitar su supresión cuando los datos ya no sean necesarios. Puede hacer todo esto desde la interfaz de la aplicación o poniendose en contacto con <a href='mailto:administrador@orabora.net' target='_top'>administrador@orabora.net</a>.</div>
+            <div class="indent_first_line py-1">Tiene derecho a obtener confirmación sobre si en <b><i>Ora et Labora</i></b> estamos tratando sus datos personales, asi como derecho a acceder a ellos, rectificar los datos inexactos o solicitar su supresión cuando los datos ya no sean necesarios. Puede hacer todo esto desde la interfaz de la aplicación o poniendose en contacto con el <a id="email" href="click:the.address.will.be.decrypted.by.javascript" onclick='decipher_mail(this, event);'>administrador</a>.</div>
             <div class="indent_first_line py-1">Responsable del tratamiento de datos: Alejandro González Rogel </div>
             <div class="indent_first_line py-1">Datos tratados: Correo electrónico, suministrado durante el registro o modificado a posteriori desde la aplicación. </div>
-            <div class="indent_first_line py-1">Información de contacto: <a href='mailto:administrador@orabora.net' target='_top'>administrador@orabora.net</a> </div>
+            <div class="indent_first_line py-1"><a id="email" href="click:the.address.will.be.decrypted.by.javascript" onclick='decipher_mail(this, event);'>Contacto</a> </div>
             
             
             <!--Condiciones-->

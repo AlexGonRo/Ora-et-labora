@@ -22,6 +22,7 @@ function render_metainfo(){
 function render_my_js_scripts(){
     ob_start();
     ?>
+        <script src="js/mail_prot.js"></script>
         <script src="js/register_validation.js"></script>
         <script src="js/display_info.js"></script>
     <?php

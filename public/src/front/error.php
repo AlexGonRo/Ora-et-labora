@@ -2,10 +2,19 @@
 
 $page_title = "Ora et Labora - ¡Ups!";
 
+$my_js_scripts = render_my_js_scripts();
+
 $content_html = render_content();
 
 require_once 'masterPage_front.php';
 
+function render_my_js_scripts(){
+    ob_start();
+    ?>
+        <script src="js/mail_prot.js"></script>
+    <?php
+    return ob_get_clean();
+}
 
 function render_content(){
     ob_start();
@@ -21,7 +30,7 @@ function render_content(){
 
                 Si estás aquí es que ha habido un fallo en el servidor o la página que has pedido no existe o no está disponible. No es estraño y probablemente no tengas tú la culpa. El juego se encuentra en desarrollo y estas cosas son más comunes de lo que deberían.
                 <br>
-                Prueba de nuevo o informa del error en cualquiera de los canales disponibles o enviando un mensaje a <a href='mailto:administrador@orabora.net' target='_top'>administrador@orabora.net</a>.
+                Prueba de nuevo o informa del error en cualquiera de los canales disponibles o enviando un mensaje al <a id="email" href="click:the.address.will.be.decrypted.by.javascript" onclick='decipher_mail(this, event);'>administrador</a>.
             </div>
          </div>
     <?php

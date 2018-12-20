@@ -1,4 +1,3 @@
-
 function display_info(event, id_text) {
     var element = document.getElementById('descriptive_text');
     if (id_text === 1) {    // Family name
@@ -35,7 +34,7 @@ function display_info(event, id_text) {
     } else if(id_text === 6){ // RGPD info
         element.innerHTML = "<b>Información básica sobre protección de datos</b> <br /> \n\
 <b>- Responsable: </b> Alejandro González Rogel <br /> \n\
-<b>- Correo electrónico: </b> <a href='mailto:administrador@orabora.net' target='_top'>administrador@orabora.net</a><br />\n\
+<b>- Correo electrónico: </b> <a id='email' href='click:the.address.will.be.decrypted.by.javascript' onclick='decipher_mail(this, event);'>Pincha aquí para ver el correo</a><br />\n\
 <b>- Información recabada:</b> Correo electrónico <br />\n\
 <b>- Finalidad: </b> Recuperación de contraseña, evitar duplicidad de cuentas, contacto.<br />\n\
 <b>- Derechos: </b>Posibilidad de acceder, rectificar y eliminar datos personales.<br />\n\
