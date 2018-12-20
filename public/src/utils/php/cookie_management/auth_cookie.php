@@ -16,8 +16,8 @@ function create_selector(){
 }
 
 function delete_user_cookie(){
-    setcookie("selector", "", time() - 3600, COOKIE_BASE_PATH.'public/src/');
-    setcookie("validator", "", time() - 3600, COOKIE_BASE_PATH.'public/src/');
+    setcookie("selector", "", time() - 3600, COOKIE_BASE_PATH);
+    setcookie("validator", "", time() - 3600, COOKIE_BASE_PATH);
 }
 
 function delete_server_cookie($selector){
@@ -34,8 +34,8 @@ function create_user_cookie(){
     $selector = create_selector();
     $validator = create_validator();
     $expiry_date = time()+COOKIE_LIFETIME;
-    setcookie("selector", $selector, $expiry_date, COOKIE_BASE_PATH.'public/src/');
-    setcookie("validator", $validator, $expiry_date, COOKIE_BASE_PATH.'public/src/');
+    setcookie("selector", $selector, $expiry_date, COOKIE_BASE_PATH);
+    setcookie("validator", $validator, $expiry_date, COOKIE_BASE_PATH);
     return array($selector, $validator, $expiry_date);
 }
 
