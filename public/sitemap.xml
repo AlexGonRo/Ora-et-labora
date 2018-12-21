@@ -8,22 +8,22 @@
 
 
 <url>
-  <loc>http://orabora.net/src/front/login.php</loc>
+  <loc>http://orabora.net/front/login.php</loc>
   <lastmod>2018-12-19T17:17:31+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://orabora.net/src/front/register.php</loc>
+  <loc>http://orabora.net/front/register.php</loc>
   <lastmod>2018-12-19T17:17:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://orabora.net/src/front/about.php</loc>
+  <loc>http://orabora.net/front/about.php</loc>
   <lastmod>2018-12-19T17:17:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://orabora.net/src/front/terms.php</loc>
+  <loc>http://orabora.net/front/terms.php</loc>
   <lastmod>2018-12-19T17:17:31+00:00</lastmod>
   <priority>0.60</priority>
 </url>

@@ -9,6 +9,8 @@ require '../../private/vars/encryption_vars.php';
 require '../../private/vars/user_data_vars.php';
 
 require '../../utils/php/user/check_names_requirements.php';
+require '../../utils/php/cookie_management/auth_cookie.php';
+
 
 
 // If we have $_POST information it means that the user already tries to change
@@ -38,6 +40,10 @@ if(!empty($_POST['old_pass']) && (!empty($_POST['username']) ||
 
     // Verify stored hash against plain-text password
     if (password_verify($_POST['old_pass'], $hash_pass)) {
+        
+        # Delete any authentication cookie this user might have in our database.
+        delete_server_cookie_by_user_id($user_id);
+        
         if (!empty($_POST['username'])){
             # Check that username fullfills the requirements
             $username_errors = check_family_name_req($_POST['username'], MIN_FAMILY_NAME, LIMIT_FAMILY_NAME, OTHER_CHARS, MY_REGEX, $username_errors);

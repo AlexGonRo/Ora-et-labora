@@ -89,7 +89,7 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
         </div>
     
         <!-- Navigation var -->
-        <nav class="navbar navbar-expand-sm my_navbar">
+        <nav class="navbar navbar-expand-md my_navbar">
             <!-- Nav bar button for movile versions-->
             <button class="navbar-toggler navbar-toggler-left d-md-none" type="button" data-toggle="collapse" data-target="#my_collapsable_navbar">
             &#9776;
@@ -229,7 +229,7 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
                 </div>
             </div>
 
-            <div class="col-md-10 col-sm-12 col-xs-12 no_padding_phone">
+            <div class="col-md-10 col-sm-12 col-xs-12 no_padding_tablet_phone">
                 <div class="right_body">
                     <div class="content">
                             <?php echo $content_html; ?>

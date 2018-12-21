@@ -63,7 +63,7 @@
                 <div class="invalid-feedback">
                   Necesitas introducir una contraseña
                 </div>
-                <div class="help-block text-right"><a href="">¿Olvidaste tu contraseña?</a></div>
+                <div class="help-block text-right"><a href="forgotten_pass.php">¿Olvidaste tu contraseña?</a></div>
               </div>
               <div class="form-group">
                 <button type="submit" formaction="login.php" class="btn btn-block">Entrar</button>

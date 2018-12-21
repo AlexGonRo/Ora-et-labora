@@ -62,3 +62,14 @@ function update_user_server_validator_cookie($selector){
     mysqli_stmt_close($update_val_query);
     $_COOKIE['validator'] = $new_validator;
 }
+
+function delete_server_cookie_by_user_id($user_id){
+    
+    $delete_cookie_query = mysqli_prepare($GLOBALS['db'],
+        "DELETE FROM  remember_auth "
+            . "WHERE user_id=?");
+    mysqli_stmt_bind_param($delete_cookie_query, "i", $user_id);
+    mysqli_stmt_execute($delete_cookie_query);
+    mysqli_stmt_close($delete_cookie_query);
+    
+}
