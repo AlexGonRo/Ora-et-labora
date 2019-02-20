@@ -42,7 +42,7 @@ if(!empty($_POST['old_pass']) && (!empty($_POST['username']) ||
     if (password_verify($_POST['old_pass'], $hash_pass)) {
         
         # Delete any authentication cookie this user might have in our database.
-        delete_server_cookie_by_user_id($user_id);
+        delete_server_cookie_by_user_id($_SESSION['user_id']);
         
         if (!empty($_POST['username'])){
             # Check that username fullfills the requirements

@@ -29,7 +29,7 @@ function display_info(event, id_text) {
         element.innerHTML = "<br />\n\
 <ul>\n\
 <li> Tiene que contener de 8 hasta 16 caracteres.</li>\n\
-<li> Se permiten caracteres alfanuméricos, espacios, signos de puntuación y matemáticos y '-', '_', '/', '\\'. No admite signos de interrogación o exclamación ni comillas.</li>\n\
+<li> Se permiten caracteres alfanuméricos, signos de puntuación y matemáticos y '-', '_', '/', '\\'. No admite signos de interrogación o exclamación ni comillas.</li>\n\
 </ul>";
     } else if(id_text === 6){ // RGPD info
         element.innerHTML = "<b>Información básica sobre protección de datos</b> <br /> \n\

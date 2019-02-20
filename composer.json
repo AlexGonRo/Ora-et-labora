@@ -1,0 +1,11 @@
+{
+    "require": {
+        "phpmailer/phpmailer" : "6.*"
+    },
+    "config": {
+    	"optimize-autoloader": true,
+        "vendor-dir": "private/src/php/vendor/"
+    }
+    
+}
+
