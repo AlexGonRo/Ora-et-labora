@@ -74,16 +74,16 @@ function render_content($registration_errors, $default_char_name,
               
             <div class="row">
             
-                <div class="col-md-6 mb-3">
-                    <label for="family_name"><b>Apellido familiar (Usuario) <a class="info_button" href="#" onClick="javascript:display_info(event, 1)">&nbsp;?&nbsp;</a></b></label>
+                <div class="col-md-6 mb-3 align-self-center text-center">
+                    <label for="family_name"><b>Apellido familiar (Nombre de usuario) <a class="info_button" href="#" onClick="javascript:display_info(event, 1)">&nbsp;?&nbsp;</a></b></label>
                     <input type="text" class="form-control" id="family_name" name="family_name" value="<?php echo $default_family_name;?>" required>
                     <div class="invalid-feedback">
                       Necesitas usar un apellido válido.
                     </div>
                 </div>
 
-                <div class="col-md-6 mb-3">
-                    <label for="char_name"><b>Nombre <a class="info_button" href="#" onClick="javascript:display_info(event, 2)">&nbsp;?&nbsp;</a></b></label>
+                <div class="col-md-6 mb-3 align-self-center">
+                    <label for="char_name"><b>Nombre del personaje <a class="info_button" href="#" onClick="javascript:display_info(event, 2)">&nbsp;?&nbsp;</a></b></label>
                   <input type="text" class="form-control" id="char_name" name="char_name" value="<?php echo $default_char_name;?>" required>
                   <div class="invalid-feedback">
                     Necesitas usar un nombre válido.
