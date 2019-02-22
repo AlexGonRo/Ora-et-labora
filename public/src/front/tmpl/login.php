@@ -54,7 +54,7 @@ function render_content(){
           </div>
           <div class="col-md-4">
             <h2>¡Aviso para navegantes!</h2>
-            <p>El proyecto se encuentra en una fase inicial y no se garantiza que cambios futuros modifiquen drásticamente la dirección del mismo. Ten en cuenta que <b> esta aplicación NO se encuentra en un estado funcional </b> y puede que nunca llegue a estarlo. Si quieres unirte a un juego, ya asentado, de similares características te recomendamos <a href="http://edadmediaonline.com">Edad Media Online</a>.</p>
+            <p>El proyecto se encuentra en una fase inicial y no se garantiza que cambios futuros modifiquen drásticamente la dirección del mismo. Ten en cuenta que <b> esta aplicación NO se encuentra en un estado funcional </b> y puede que nunca llegue a estarlo. Si quieres unirte a un juego de similares características, te recomendamos <a href="http://edadmediaonline.com">Edad Media Online</a>.</p>
             
           </div>
         </div>
