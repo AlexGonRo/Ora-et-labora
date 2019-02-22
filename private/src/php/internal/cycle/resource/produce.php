@@ -9,23 +9,23 @@ function produce($db, $resource_id, $resource_main_id, $level, $status, $n_worke
     
     if ($resource_main_id == FIELD_RES_ID)
         $production = field_prod($db, $resource_id, $level, $status, $n_workers);
-    else if (resource == FOREST_RES_ID)
+    else if ($resource_id == FOREST_RES_ID)
         $production = forest_prod($db, $status, $n_workers);
-    else if (resource == COAST_RES_ID)
+    else if ($resource_id == COAST_RES_ID)
         $production = coast_prod($db, $level, $status, $n_workers);
-    else if (resource == QUARRY_RES_ID)
+    else if ($resource_id == QUARRY_RES_ID)
         $production = quarry_prod($db, $level, $status, $n_workers);
-    else if (resource == GOLD_RES_ID)
+    else if ($resource_id == GOLD_RES_ID)
         $production = gold_mine_prod($db, $level, $status, $n_workers);
-    else if (resource == IRON_RES_ID)
+    else if ($resource_id == IRON_RES_ID)
         $production = iron_mine_prod($db, $level, $status, $n_workers);
-    else if (resource == SILVER_RES_ID)
+    else if ($resource_id == SILVER_RES_ID)
         $production = silver_mine_prod($db, $level, $status, $n_workers);
-    else if (resource == COPPER_RES_ID)
+    else if ($resource_id == COPPER_RES_ID)
         $production = copper_mine_prod($db, $level, $status, $n_workers);
-    else if (resource == RIVER_RES_ID)
+    else if ($resource_id == RIVER_RES_ID)
         $production = river_prod($db, $level, $status, $n_workers);
-    else if (resource == CLAY_RES_ID)
+    else if ($resource_id == CLAY_RES_ID)
         $production = clay_mine_prod($db, $level, $status, $n_workers);
         
     return $production;

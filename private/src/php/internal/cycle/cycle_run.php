@@ -286,7 +286,7 @@ function pop_to_land_resources($db){
     # Register last entry
     $resources[$previous_region] = $tmp;
             
-    mysqli_stmt_close(res_query);
+    mysqli_stmt_close($res_query);
     
 
     # Let's put those villagers to work
@@ -423,7 +423,7 @@ function update_birthdays($db){
 function delete_users($db){
     # Select all workers
     $del_users_query = mysqli_prepare($db,
-        'SELECT id, del_countdown FROM users WHERE $del_countdown IS NOT NULL');
+        'SELECT id, del_countdown FROM users WHERE del_countdown IS NOT NULL');
     mysqli_stmt_bind_result($del_users_query, $user_id, $del_countdown);
     mysqli_stmt_execute($del_users_query);
     mysqli_stmt_store_result($del_users_query);

@@ -11,6 +11,9 @@ require '../../../../private/vars/land_resources_vars.php';
 require '../../../../utils/php/worker/create_worker.php';
 
 
+# TODO Needs to be checked. It may not work properly anymore.
+#       If it does, maybe some queries are unnecessary
+
 # ---------------------------------------
 # ---------------------------------------
 # ---------------------------------------

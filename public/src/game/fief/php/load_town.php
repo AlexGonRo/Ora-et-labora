@@ -40,10 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 # Get all the info about the town
 
 $town_info_query = mysqli_prepare($db,
-    'SELECT name, type, region_id, kingdom_id, population, zeal, security, owner_id, near_castle_mon, local_tax, duchy_tax, royal_tax '
+    'SELECT name, type, region_id, kingdom_id, population, zeal, security, owner_id, local_tax, duchy_tax, royal_tax '
         . 'FROM towns WHERE id = ?');
 mysqli_stmt_bind_param($town_info_query, "i", $town_id);
-mysqli_stmt_bind_result($town_info_query, $town_name, $town_type, $region_id, $kingdom_id, $population, $zeal, $security, $owner_id, $near_castle, $local_tax, $duchy_tax, $royal_tax);
+mysqli_stmt_bind_result($town_info_query, $town_name, $town_type, $region_id, $kingdom_id, $population, $zeal, $security, $owner_id, $local_tax, $duchy_tax, $royal_tax);
 mysqli_stmt_execute($town_info_query);
 mysqli_stmt_fetch($town_info_query);
 mysqli_stmt_close($town_info_query);

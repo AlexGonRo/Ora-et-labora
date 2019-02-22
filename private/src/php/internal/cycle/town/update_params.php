@@ -4,8 +4,8 @@
 
 function update_town_params($db){
     $town_query = mysqli_prepare($db,
-        'SELECT id, security, zeal, near_castle_mon FROM towns');
-    mysqli_stmt_bind_result($town_query, $town_id, $security, $zeal, $near_castle);
+        'SELECT id, security, zeal FROM towns');
+    mysqli_stmt_bind_result($town_query, $town_id, $security, $zeal);
     mysqli_stmt_execute($town_query);
     mysqli_stmt_store_result($town_query);
     

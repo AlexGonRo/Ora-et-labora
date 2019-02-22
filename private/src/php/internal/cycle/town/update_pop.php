@@ -5,13 +5,14 @@ function update_town_pop($db, $death_rate, $birth_rate, $small_town_limit,
         $small_town_bonus, $has_player_bonus, $min_pop){
     
     $town_query = mysqli_prepare($db,
-        'SELECT id, population, near_castle_mon FROM towns');
+        'SELECT a.id, a.population, b.id '
+            . 'FROM towns AS a LEFT JOIN castles_monasteries as B ON a.id=b.town_id');
     mysqli_stmt_bind_result($town_query, $town_id, $pop, $near_castle);
     mysqli_stmt_execute($town_query);
     mysqli_stmt_store_result($town_query);
     
     while (mysqli_stmt_fetch($town_query)){
-        if(!$near_castle){
+        if(is_null($near_castle)){
             $new_pop = round($pop + ($pop*$birth_rate) - ($pop*$death_rate),2);      # Town has not nearby player
         } else if($pop < $small_town_limit){
             $new_pop = round($pop + ($pop * $birth_rate) + ($pop*$has_player_bonus) + ($pop*$small_town_bonus) - ($pop * $death_rate),2);  # Town has nearby player and it's small
