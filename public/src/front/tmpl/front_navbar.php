@@ -7,14 +7,12 @@
       
     <!--Ora et Labora logo -->
     <a class="navbar-brand d-flex flex-fill" href="login.php">
-        <img class="img-rounded" src="https://via.placeholder.com/32">
+        <!-- <img class="img-rounded" src="../../img/public/oel_icon/oel_icon32x32.png"> -->
+        <img id="img_logo_in_navbar" src="../../img/public/oel_logo/logo_sixth_size.png" class="" alt="Ora et Labora logo">
     </a>
 
     <div class="collapse navbar-collapse sidenav" id="my_front_navbar">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="title_in_navbar" href="login.php">Ora et Labora</a>
-        </li>
         <li class="nav-item px-2 my_title_navbar_item">
           <a class="nav-link" disabled href="#">Ranking</a>
         </li>

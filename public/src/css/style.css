@@ -141,20 +141,41 @@ my_body {
     width: 25px;
 }
 
+/* Login image for the main page*/
+#login_oel_logo {
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+    #login_oel_logo{
+        max-width: 60%;
+    }
+}
+
+
 .my_front_navbar {
     display: flex;
     background-color: #DDBB96;
     height: 4em;  /* Fixed size! */
 }
 
-.title_in_navbar{
+#img_logo_in_navbar{
+    max-height: 2em; /* Fixed size! */
+}
+
+@media (min-width: 768px) {
+    #img_logo_in_navbar{
+        max-height: 2.5em; /* Fixed size! */
+    }
+}
+
+#title_in_navbar{
     display: block;
     padding: .5rem 2rem .5rem .5rem;
     font-size: 1.2em;
     font-weight: bold;
     color:black;
 }
-    
 
 @media (min-width: 768px) and (max-width: 992px) {
     .title_in_navbar{
@@ -313,9 +334,13 @@ my_body {
 ********************************************
 ********************************************/
 
-#name_title {
+#game_logo_div {
     text-align:center;
-    margin: 15px 0px 25px 0px;
+    margin: 0.5em 0em 0.5em 0em;
+}
+
+#game_logo{
+    max-height: 6em
 }
 
 

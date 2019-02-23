@@ -32,7 +32,7 @@ function render_content(){
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div id="login_first_div">
       <div class="container">
-        <h1 class="display-3">Ora et Labora</h1>
+        <img id="login_oel_logo" class="mb-1 mb-md-3" src="../../img/public/eot_logo/logo_full_size.png" class="img-fluid" alt="Ora et Labora logo">
         <h5 class="normal_text_for_sm"><p><b><i>Ora et Labora</i></b> es un juego online, de navegador y gratuito ambientado en la Edad Media. ¡Conviértete en administrador de tu propio castillo o monasterio y hazlo crecer hasta convertirte en dueño y señor de tu propio reino!</p></h5>
         <p><button onclick="location.href='register.php'" class="btn login_btn"><b>¡Registrarse!</b></button></p>
       </div>

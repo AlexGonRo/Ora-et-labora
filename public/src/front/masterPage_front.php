@@ -4,6 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><?php echo $page_title?></title>
+  
+  <!-- Favicon for the browser tabs. From https://realfavicongenerator.net/-->
+  <link rel="shortcut icon" href="../../img/public/oet_favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../img/public/oet_favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../img/public/oet_favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../img/public/oet_favicon/site.webmanifest">  <!--For android's menu-->
+  <link rel="mask-icon" href="../../img/public/oet_favicon/safari-pinned-tab.svg" color="#5bbad5"> <!--For safary-->
+  <link rel="apple-touch-icon" sizes="60x60" href="../../img/public/oet_favicon/apple-touch-icon.png"> <!--Apple phone-->
+  <meta name="theme-color" content="#ffffff"> <!--For the iOS menu icon, I believe-->
+
+  <link rel="shortcut icon" sizes="32x32" href="../../img/public/oet_favicon/favicon-32x32.png" type="image/png" />
+  <link rel="shortcut icon" sizes="16x16" href="../../img/public/oet_favicon/favicon-16x16.png" type="image/png" />
+  
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+
+
   <!--Other meta information-->
   <?php echo $page_meta ?? ''?>
 

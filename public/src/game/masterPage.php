@@ -47,6 +47,16 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
     
 <head>
     <title><?php echo $page_title?></title>
+    
+    <!-- Favicon for the browser tabs. From https://realfavicongenerator.net/ -->
+    <link rel="shortcut icon" href="../../../img/public/oet_favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../img/public/oet_favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../img/public/oet_favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../../img/public/oet_favicon/site.webmanifest">  <!--For android's menu-->
+    <link rel="mask-icon" href="../../../img/public/oet_favicon/safari-pinned-tab.svg" color="#5bbad5"> <!--For safary-->
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../img/public/oet_favicon/apple-touch-icon.png"> <!--Apple phone-->
+    <meta name="theme-color" content="#ffffff"> <!--For the iOS menu icon, I believe-->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <!-- --------- Load JQuery and Bootstrap -----------
@@ -83,9 +93,8 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
 
     <div id="header">
     
-        <div id="name_title" class="d-none d-md-block">  <!--This hides the title in the mobile version-->
-            <h1>ORA ET LABORA</h1>
-            <!--"img\Logo\logo.png"-->
+        <div id="game_logo_div" class="d-none d-md-block">  <!--This hides the title in the mobile version-->
+            <img id="game_logo" class="img-fluid" src="../../../img/public/oel_logo/logo_half_size.png"  alt="Ora et Labora logo">
         </div>
     
         <!-- Navigation var -->
@@ -96,7 +105,7 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
             </button>
             <!--Ora et Labora logo for mobile versions-->
             <a class="navbar-brand d-md-none">
-                <img class="img-rounded" src="https://via.placeholder.com/32">
+                <img id="img_logo_in_navbar" src="../../../img/public/oel_logo/logo_sixth_size.png" class="img-fluid" alt="Ora et Labora logo">
             </a>
 
             <!-- Links -->

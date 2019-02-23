@@ -24,9 +24,11 @@ $default_role='0';
 $default_property_name='';
 $default_email='';
 
+ob_start();   // Make sure we don't output anything until the end so we can redirect changing the header
+
+
 // If the user submited the registration form
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  ob_start();   // Make sure we don't output anything until the end so we can redirect changing the header
   $family_name = $_POST['family_name'] ?? '';
   $char_name = $_POST['char_name'] ?? '';
   $property_name = $_POST['property_name'] ?? '';
