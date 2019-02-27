@@ -16,6 +16,7 @@ function render_left_menu($type, $role='', $pre_path=''){
         ?>
         <li><a href="<?php echo $pre_path ?>index.php">Inicio</a></li>
         <li><a href="<?php echo $pre_path ?>workers.php"><?php if ($role) {echo "Monjes"; } else {echo "Trabajadores"; } ?></a></li>
+        <li><a href="<?php echo $pre_path ?>buildings.php">Edificios</a></li>
         <li><a href="<?php echo $pre_path ?>store.php">Almacenes</a></li>
         <li><a href="<?php echo $pre_path ?>produce.php">Fabricación</a></li>
         <li><a href="<?php echo $pre_path ?>animals.php">Animales</a></li>

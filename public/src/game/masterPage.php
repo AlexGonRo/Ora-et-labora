@@ -240,6 +240,9 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
 
             <div class="col-md-10 col-sm-12 col-xs-12 no_padding_tablet_phone">
                 <div class="right_body">
+                    <div class="page_title content_block">
+                        <h3> <?php echo $page_title; ?> </h3>
+                    </div>
                     <div class="content">
                             <?php echo $content_html; ?>
                     </div>

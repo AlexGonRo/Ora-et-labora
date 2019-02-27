@@ -1,6 +1,6 @@
 <?php 
 
-$page_title = "Configuración";
+$page_title = "Perfil y dinastía";
 
 $my_js_scripts = render_my_js_scripts();
 

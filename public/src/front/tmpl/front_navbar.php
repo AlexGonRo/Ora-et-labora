@@ -17,7 +17,7 @@
           <a class="nav-link" disabled href="#">Ranking</a>
         </li>
         <li class="nav-item px-2 my_title_navbar_item">
-          <a class="nav-link" href="#">Foro</a>
+          <a class="nav-link" href="https://github.com/AlexGonRo/Ora-et-labora/issues">Foro</a>
         </li>
         <li class="nav-item px-2 my_title_navbar_item">
           <a class="nav-link" disabled href="#">Redes sociales</a>
