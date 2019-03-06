@@ -9,6 +9,10 @@ nbproject/
 public/src/bootstrap-4.1.3/
 public/src/jquery/
 
+# Other 3rd party libraries #
+############
+public/src/ImageViewer
+
 # Composer files#
 ############
 private/src/php/vendor

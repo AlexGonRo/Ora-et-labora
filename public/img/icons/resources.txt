@@ -1,0 +1,55 @@
+I did not create many of the graphical resources that you may find in this directory. However, I have the rights to use them.
+
+Here you can find a list of all the graphical resources I used and where they all came from:
+
+items/food/
+
+grain.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+grape.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+water.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+apple.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+meat_and_fish.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/ (modified)
+carrot.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+local_species ->  https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+
+/other/
+
+chalice.png -> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger)
+crown.png -> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger)
+golden_chest.png -> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger)
+killed_in_combat.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+dead.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+slave.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+message.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+
+items/raw_materials/
+
+gold.png -> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger)
+wood.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/ (modified)
+silver.png -> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger) (modified)
+iron.png -> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger) (modified)
+stone.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+
+items/money/
+
+money(poor).png -> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger)
+money(rich).png-> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger)
+money(very_rich).png-> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger)
+money.png-> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger)
+
+/land_resources/
+
+mine.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+forest.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+town.png -> https://www.gamedevmarket.net/asset/rpg-overworld-tileset/ (modified)
+village.png -> https://www.gamedevmarket.net/asset/rpg-overworld-tileset/ (modified)
+river.png -> https://www.gamedevmarket.net/asset/rpg-overworld-tileset/ (modified)
+field.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/) and https://www.gamedevmarket.net/asset/animals-rpg-sprites-8008/
+coast.png -> https://www.gamedevmarket.net/asset/rpg-overworld-tileset/ (modified)
+
+/actions/
+
+steal.png - https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+kill.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+receive_money.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+pay_money.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
