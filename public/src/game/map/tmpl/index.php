@@ -2,11 +2,29 @@
 
 $page_title = "Mapa";
 
+
+$my_js_scripts = render_my_js_scripts();
+
 $left_list_html = render_left_menu('map');
 
 $content_html = render_content();
 
 require_once '../masterPage.php';
+
+function render_my_js_scripts(){
+    ob_start();
+    ?>
+        <script src="../../ImageViewer/ImageViewer.js"></script>
+        <link href="../../ImageViewer/imageviewer.css"  rel="stylesheet" type="text/css" />
+        <script>
+            $(document).ready(function() {
+                var viewer = ImageViewer('#test');
+            });
+        </script>
+    <?php
+    return ob_get_clean();
+}
+
 
 
 function render_content(){
@@ -16,8 +34,13 @@ Mapa no functional. Solo las provincias gallegas pueden pincharse pero no tienen
 Las únicas provincias de las que se puede obtener información son las asturianas y cántabras. Ej:
 <a href="region.php?id=103">Provincia de Avilés</a> o <a href="region.php?id=202">Merindad de Campoo</a>. 
 Tienes una lista completa en la página del <a href="kingdom.php?id=1">Reino de Asturias</a>
-    <img src="../../img/public/mapa_norte.gif" alt="Mapa de la península ibérica" usemap="#spain_map">
 
+
+<!-- <div class="cf" id="global_map_div" style="overflow: auto; overflow-y:hidden; overflow-x:hidden; max-height:500px; border: 5px black inset"> -->
+<div class="cf" style="display: block; width: 700px; height: 379px; left: 0px; top: 0px; max-width: none; max-height: none;">
+        <img id="test" src="../../../img/mapa_norte_small.png" data-high-res-src="../../../img/mapa_norte.png" 
+             alt="Mapa de la península ibérica" class="pannable-image" usemap="#spain_map">
+        
     <map name="spain_map">
       <area shape="poly" coords="4.00,456.00 224.00,456.00 224.00,456.00
              222.43,447.24 223.51,445.77 222.86,441.00
@@ -678,12 +701,11 @@ Tienes una lista completa en la página del <a href="kingdom.php?id=1">Reino de 
              330.79,58.37 324.47,62.07 324.47,62.07
              321.61,64.37 318.04,71.47 317.00,75.00" href="region.php?id=29" alt="Comarca de A Coruña">
       
-    </map> 
-
+</map> 
+            
+</div>
+    
 
     <?php
     return ob_get_clean(); 
 }
-
-    
-   

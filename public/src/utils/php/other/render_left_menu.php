@@ -48,6 +48,9 @@ function render_left_menu($type, $role='', $pre_path=''){
         <?php
     } else if ($type == 'market'){
         ?>
+        <li><a href="<?php echo $pre_path ?>index.php">Inicio</a></li>
+        <li><a href="<?php echo $pre_path ?>market.php">Mapa</a></li>
+        <li><a href="<?php echo $pre_path ?>trade_route.php">Ruta comercial</a></li>
         
         <?php
     } else if ($type == 'profile'){
