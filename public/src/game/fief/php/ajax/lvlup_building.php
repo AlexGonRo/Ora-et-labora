@@ -9,9 +9,7 @@ require '../../../../private/vars/building_vars.php';
 require '../../../../utils/php/item_management/has_resources.php';
 require '../../../../utils/php/item_management/get_lvlup_res.php';
 require '../../../../utils/php/item_management/consume_items.php';
-require '../../../../utils/php/item_management/get_item_names.php';
-
-
+require '../../../../utils/php/item_management/get_item_info.php';
 
 
 $town_id = $_POST['town_id'];

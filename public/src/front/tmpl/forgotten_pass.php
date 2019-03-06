@@ -11,7 +11,18 @@ require_once 'masterPage_front.php';
 function render_my_js_scripts(){
     ob_start();
     ?>
-
+    <script>
+        $(document).ready(function() {
+          $('#send_button').on('click', function() {
+            var $this = $(this);
+            var loadingText = 'Cargando...';
+            if ($(this).html() !== loadingText) {
+              $this.data('original-text', $(this).html());
+              $this.html(loadingText);
+            }
+          });
+        })
+    </script>
     <?php
     return ob_get_clean();
 }
@@ -40,7 +51,7 @@ function render_content($alert_msg, $alert_type){
                 <?php } ?>
             </div>
             <!--Reglas-->
-            <form class="center"  action="forgotten_pass.php" method="post">
+            <form class="center" action="forgotten_pass.php" method="post">
                 <label class="form-group"> Introduce aquí tu correo.</label>
                 <div class="form-group form-inline">
                     <div class="input-group-prepend">
@@ -49,7 +60,9 @@ function render_content($alert_msg, $alert_type){
                     <input type="text" class="form-control" name="email" id="email" value="" placeholder="Correo electrónico">
                 </div>
 
-                <button type="submit" class="btn">Enviar</button>
+                <button type="submit" class="btn" id="send_button">Enviar</button>
+                
+
             </form>
             
         </div>

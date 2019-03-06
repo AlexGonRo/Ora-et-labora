@@ -6,7 +6,7 @@ require '../../utils/php/other/render_left_menu.php';
 
 require "../../private/vars/building_vars.php";
 
-require '../../utils/php/item_management/get_item_names.php';
+require '../../utils/php/item_management/get_item_info.php';
 require '../../utils/php/building/compute_space.php';
 require '../../utils/php/item_management/get_lvlup_res.php';
 require '../../utils/php/building/get_maint_res.php';
@@ -37,30 +37,44 @@ while (mysqli_stmt_fetch($building_info_query)) {
         $under_construction = False;
     }
                 
-    # Get both names and quantities for the maintenance of the building
+    # Get both names and quantities for the maintenance of the building (and path to the UI icons)
     $maint_array = get_building_maint_res($building_id, $level);
     if(empty($maint_array)){    //TODO This 'if' would not be necessary if the DB had entries for all buildings at all levels.
         $maint_names = array();
+        $maint_icons = array();
     } else {
         $maint_names = get_item_names(array_keys($maint_array));
+        $maint_icons = get_item_icons(array_keys($maint_array));
     }
+    
     # Add the maintenance of this building to the global resource count
-    foreach (array_combine($maint_names, array_values($maint_array)) as $item_name => $quantity) {
+    foreach (array_keys($maint_array) as $i) {
+        $item_name = $maint_names[$i];
+        $item_quantity = $maint_array[$i];
+        $item_icon = $maint_icons[$i];
+        
         if (array_key_exists($item_name, $total_maintenance)){
-            $total_maintenance[$item_name] += $quantity;
+            $total_maintenance[$item_name]['quantity'] += $item_quantity;
         }
         else{
-            $total_maintenance[$item_name] = $quantity;
+            $total_maintenance[$item_name] = array(
+                'icon' => $item_icon,
+                'quantity' => $item_quantity);
         }
-    }
+        
+        
+    } 
+
 
                 
     # Get both names and quantities for leveling up the building
     $lvlup_array = get_building_lvlup_resources($building_id, $level);
     if(empty($lvlup_array)){    # We got the building to the highest level
         $lvlup_names = array();
+        $lvlup_icons = array();
     } else {
         $lvlup_names = get_item_names(array_keys($lvlup_array));
+        $lvlup_icons = get_item_icons(array_keys($lvlup_array));
     }
     
                 
@@ -92,6 +106,28 @@ while (mysqli_stmt_fetch($building_info_query)) {
     }
     
     
+    
+    // Let's re-arrange all the information related to maintenance and lvlup resources
+    
+    $my_maint_array = array();
+    foreach($maint_array as $item_id => $item_quantity){
+        $item_name = $maint_names[$item_id];
+        $item_icon = $maint_icons[$item_id];
+        $my_maint_array[$item_name] = array(
+            'icon' => $item_icon,
+            'quantity' => $item_quantity
+        );
+    }
+            
+    $my_lvlup_array = array();
+    foreach($maint_array as $item_id => $item_quantity){
+        $item_name = $lvlup_names[$item_id];
+        $item_icon = $lvlup_icons[$item_id];
+        $my_lvlup_array[$item_name] = array(
+            'icon' => $item_icon,
+            'quantity' => $item_quantity
+        );
+    }
 
     $buildings[] = array('id' => $user_building_id,
         'type' => $building_id,
@@ -99,8 +135,8 @@ while (mysqli_stmt_fetch($building_info_query)) {
         'preservation' => $preservation,
         'level' => $level,
         'under_construction' => $under_construction,
-        'maint_array' => array_combine($maint_names, array_values($maint_array)),  # Array with the maintenance quantity of a material
-        'lvlup_array' => array_combine($lvlup_names,  array_values($lvlup_array)),
+        'maint_array' => $my_maint_array,
+        'lvlup_array' => $my_lvlup_array,
         'can_lvlup' => $can_lvlup,
         'can_lvldown' => $can_lvldown,
         'lvldown_str' => $lvldown_str,

@@ -36,6 +36,11 @@ my_body {
     font-size: 1.2em;
 }
 
+.slightly_smaller_header{
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
 .first_content_block {
     padding: 10px 13px 17px 13px;
     border-bottom: 1px solid rgba(169, 97, 19, 0.4);
@@ -46,6 +51,14 @@ my_body {
     border-bottom: 1px solid rgba(169, 97, 19, 0.4);
     line-height: 2;
     margin-bottom: 1em;
+}
+
+.horizontal_separator {
+    border-bottom: 1px solid rgba(169, 97, 19, 0.4);
+}
+
+.vertical_separator {
+    border-right: 1px solid rgba(169, 97, 19, 0.4);
 }
 
 .descriptive_text {
@@ -371,6 +384,7 @@ my_body {
         margin-bottom: 15px;
         text-align: center;
     }
+    
     #user_info_table{
         display: inline-block;
         margin-left:auto; 
@@ -455,6 +469,15 @@ my_body {
     background: #ffffff;
     padding: 15px 20px 15px 20px;
     margin-bottom: 5px;
+}
+
+.bordered {
+    border-collapse: collapse;
+
+    border: 1px solid #A96113;
+
+    border-radius: 3px;
+    background: #ffffff;
 }
 
 

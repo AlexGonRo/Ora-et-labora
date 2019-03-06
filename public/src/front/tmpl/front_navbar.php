@@ -7,8 +7,8 @@
       
     <!--Ora et Labora logo -->
     <a class="navbar-brand d-flex flex-fill" href="login.php">
-        <!-- <img class="img-rounded" src="../../img/public/oel_icon/oel_icon32x32.png"> -->
-        <img id="img_logo_in_navbar" src="../../img/public/oel_logo/logo_sixth_size.png" class="" alt="Ora et Labora logo">
+        <!-- <img class="img-rounded" src="../../img/oel_icon/oel_icon32x32.png"> -->
+        <img id="img_logo_in_navbar" src="../../img/oel_logo/logo_sixth_size.png" class="" alt="Ora et Labora logo">
     </a>
 
     <div class="collapse navbar-collapse sidenav" id="my_front_navbar">

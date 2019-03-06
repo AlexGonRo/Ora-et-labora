@@ -22,7 +22,7 @@ function render_content(){
 
         <div class="row">
             <div class="col-md-6 center">
-                <img class="img-fluid" src="../../img/public/error_image.jpg" alt="Error image"> 
+                <img class="img-fluid" src="../../img/error_image.jpg" alt="Error image"> 
             </div>
 
             <div class="col-md-6 center">

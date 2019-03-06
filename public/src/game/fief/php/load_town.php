@@ -5,7 +5,7 @@ if ($_GET) {
 
     require_once '../../utils/php/item_management/has_resources.php';
     require_once '../../utils/php/item_management/get_lvlup_res.php';
-    require_once '../../utils/php/item_management/get_item_names.php';
+    require_once '../../utils/php/item_management/get_item_info.php';
     require_once '../../utils/php/names/get_name.php';
 
 
@@ -20,7 +20,7 @@ if ($_GET) {
 
     require_once '../../../utils/php/item_management/has_resources.php';
     require_once '../../../utils/php/item_management/get_lvlup_res.php';
-    require_once '../../../utils/php/item_management/get_item_names.php';
+    require_once '../../../utils/php/item_management/get_item_info.php';
     require_once '../../../utils/php/names/get_name.php';
 
     require_once '../../../private/vars/item_vars.php';

@@ -113,55 +113,75 @@ function render_alerts($welcome, $need_tutorial, $still_in_France, $days_left){
 function render_content($news, $alerts, $active_actions){
     ob_start();
     ?>
-        <div id="horizontal_container">
-            <span class="small_header">Últimas noticias<br></span>
-            <div id="news" class="overview_table">
-                <table class='table table-hover'>
-                <?php if (empty($news)){ ?>
-                    <tr><td colspan='2'>No hay noticias frescas... de momento.</td></tr>
-                <?php } 
-                foreach ($news as $new){ ?>
-                    <tr>
-                    <td width='10%'><?php echo $new['day']."-".$new['month']."-".$new['year']?></td>
-                    <td width='90%'><?php echo $new['msg']?></td>
-                    </tr>
-                <?php } ?>
-                </table>
-            </div>
+        <div class="row pb-1">
+            <div class="col-12">
+                <span class="small_header pb-1">Últimas noticias<br></span>
+            </div> 
         </div>
-
-        <div class="row">
-            <div class="col-md-6 col-12 col-sm-12">
-                <span class="small_header">Alertas </br></span>
-                <div id="alerts" class="overview_table">
+        <div class="row mb-3">
+            <div class="col-12">
+                <div id="news" class="overview_table">
                     <table class='table table-hover'>
-                    <?php if (empty($alerts)){ ?>
-                        <tr><td colspan='2'>No parece haber alertas pendientes.</td></tr>
+                    <?php if (empty($news)){ ?>
+                        <tr><td colspan='2'>No hay noticias frescas... de momento.</td></tr>
                     <?php } 
-                    foreach ($alerts as $alert){ ?>
+                    foreach ($news as $new){ ?>
                         <tr>
-                        <td width='90%'><?php echo $alert['msg']?></td>
+                        <td width='10%'><?php echo $new['day']."-".$new['month']."-".$new['year']?></td>
+                        <td width='90%'><?php echo $new['msg']?></td>
                         </tr>
                     <?php } ?>
                     </table>
                 </div>
             </div>
-            
+                
+        </div>
+
+        <div class="row">
             <div class="col-md-6 col-12 col-sm-12">
-                <span class="small_header">Acciones activas <br></span>
-                <div id="active_actions" class="overview_table">
-                    <table class='table table-hover'>
-                        <?php if (empty($active_actions)){ ?>
-                            <tr><td colspan='2'>No hay noticias frescas... de momento.</td></tr>
-                        <?php } 
-                        foreach ($active_actions as $active_action){ ?>
-                            <tr>
-                            <td width='90%'><?php echo $active_action['msg']?></td>
-                            </tr>
-                        <?php } ?>
-                    </table>
+                <div class="row">
+                    <div class="col-12 pb-1">
+                        <span class="small_header">Alertas <br></span>
+                    </div>
+                    <div class="col-12">
+                        <div id="alerts" class="overview_table">
+                            <table class='table table-hover'>
+                            <?php if (empty($alerts)){ ?>
+                                <tr><td colspan='2'>No parece haber alertas pendientes.</td></tr>
+                            <?php } 
+                            foreach ($alerts as $alert){ ?>
+                                <tr>
+                                <td width='90%'><?php echo $alert['msg']?></td>
+                                </tr>
+                            <?php } ?>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
+            <div class="col-md-6 col-12 col-sm-12">
+                <div class="row">
+                    <div class="col-12 pb-1">
+                        <span class="small_header">Acciones activas <br></span>
+                    </div>
+                    <div class="col-12">
+                        <div id="alerts" class="overview_table">
+                            <table class='table table-hover'>
+                            <?php if (empty($active_actions)){ ?>
+                                <tr><td colspan='2'>No hay noticias frescas... de momento.</td></tr>
+                            <?php } 
+                            foreach ($active_actions as $active_action){ ?>
+                                <tr>
+                                <td width='90%'><?php echo $active_action['msg']?></td>
+                                </tr>
+                            <?php } ?>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     <?php

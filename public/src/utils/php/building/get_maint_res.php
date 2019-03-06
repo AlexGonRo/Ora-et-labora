@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Get a list of resources needed to fulfill a building dairly maintenance.
+ * 
+ * @param int $building_id Building type identifier in the database
+ * @param int $level Level we want to look the maintenance resources for
+ * @return array Associative array where the index is the resource id (int) and the value is the quantity (int)*/
 function get_building_maint_res($building_id, $level){
 
     $building_maint_query = mysqli_prepare($GLOBALS['db'],

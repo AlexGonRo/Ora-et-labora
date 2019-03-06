@@ -54,20 +54,46 @@ function render_content($occupied, $total_space, $buildings, $total_maintenance)
                 <?php } ?>
                 <!--Maintenance cost-->
                 <td class="centered_td">
-                <?php foreach ($building['maint_array'] as $name => $q){ ?>
-                    <?php echo ucfirst($name).": ".$q." "; ?>
+                <?php foreach ($building['maint_array'] as $name => $info){ ?>
+                    
+                    <img src="../../../<?php echo ucfirst($info['icon']); ?>" alt="<?php echo ucfirst($name); ?>" title="<?php echo ucfirst($name); ?>" 
+                         height="16px" width=16px">: <?php echo $info['quantity']; ?>
+                    
                 <?php } ?>
                 </td>
                 <!--Preservation value-->
-                <td class="centered_td"><?php echo $building['preservation']?></td>
+                <td class="centered_td">
+                    <div class="progress">
+                        <?php if($building['preservation'] >= 75) { ?>
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="<?php echo $building['preservation']?>"
+                            aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $building['preservation']?>%">
+                              <?php echo $building['preservation']?>
+                            </div>
+                        <?php } else if($building['preservation'] >= 25) { ?>
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="<?php echo $building['preservation']?>"
+                            aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $building['preservation']?>%">
+                              <?php echo $building['preservation']?>
+                            </div>
+                        <?php } else { ?>
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="<?php echo $building['preservation']?>"
+                            aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $building['preservation']?>%">
+                              <?php echo $building['preservation']?>
+                            </div>
+                         <?php }?>
+                        
+                      </div>
+                </td>
                 <!--Level up cost and option-->
                 <td class="centered_td">
                 <?php if($building['under_construction']){ ?>
                     Ampliandose
                 <?php } else {?>
                     <p id='<?php echo "p_".$building['id'];?>' >
-                    <?php foreach ($building['lvlup_array'] as $name => $q){ ?>
-                        <?php echo ucfirst($name).": ".$q." "; ?>
+                    <?php foreach ($building['lvlup_array'] as $name => $info){ ?>
+                        
+                        <img src="../../../<?php echo ucfirst($info['icon']); ?>" alt="<?php echo ucfirst($name); ?>" title="<?php echo ucfirst($name); ?>" 
+                         height="16px" width=16px">: <?php echo $info['quantity']; ?>
+                        
                     <?php } ?>
                     </p>
                     
@@ -102,11 +128,10 @@ function render_content($occupied, $total_space, $buildings, $total_maintenance)
 
         <div class="float-right mt-3 slightly_bigger_text">
             <b>Total coste de mantenimiento:</b>
-            <?php
-            foreach ($total_maintenance as $name => $q){
-               echo ucfirst($name).": ".$q." ";
-            }
-            ?>
+            <?php foreach ($total_maintenance as $name => $info){ ?>
+            <img src="../../../<?php echo ucfirst($info['icon']); ?>" alt="<?php echo ucfirst($name); ?>" title="<?php echo ucfirst($name); ?>" 
+                 height="16px" width=16px">: <?php echo $info['quantity']; ?>
+            <?php } ?>
         </div>
     </div>
 

@@ -60,8 +60,8 @@ function render_content($kitchen_text_receipes, $my_kitchen_id,
                 <table id="<?php echo $my_kitchen_id."_table";?>" class="table table-bordered table-hover table-striped">
                     <thead>
                     <tr>
-                    <th class="centered_td" scope="col">Objeto</td>
-                    <th class="centered_td" scope="col">Cantidad</td>
+                    <th class="centered_td" scope="col">Objeto</th>
+                    <th class="centered_td" scope="col">Cantidad</th>
                     </tr>
                     </thead>
                 <?php if(empty($kit_prod_items)) {?>

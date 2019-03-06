@@ -3,7 +3,7 @@
 require_once BASE_PATH_PUBLIC.'src/private/vars/building_vars.php';
 require_once BASE_PATH_PUBLIC.'src/private/vars/item_vars.php';
 require_once BASE_PATH_PUBLIC.'src/utils/php/item_management/has_resources.php';
-require_once BASE_PATH_PUBLIC.'src/utils/php/item_management/get_item_recipe.php';
+require_once BASE_PATH_PUBLIC.'src/utils/php/item_management/get_item_info.php';
 require_once BASE_PATH_PUBLIC.'src/utils/php/item_management/add_items.php';
 require_once BASE_PATH_PUBLIC.'src/utils/php/item_management/consume_items.php';
 

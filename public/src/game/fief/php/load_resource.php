@@ -8,7 +8,7 @@ if ($_GET) {
     require_once '../../utils/php/other/verify_user.php';
 
     require_once '../../utils/php/item_management/has_resources.php';
-    require_once '../../utils/php/item_management/get_item_names.php';
+    require_once '../../utils/php/item_management/get_item_info.php';
     require_once '../../utils/php/item_management/get_lvlup_res.php';
     require_once '../../utils/php/time/get_ingame_time.php';
     require_once '../../utils/php/time/compute_turns_left.php';
@@ -24,7 +24,7 @@ if ($_GET) {
     require_once '../../../utils/php/other/verify_user.php';
 
     require_once '../../../utils/php/item_management/has_resources.php';
-    require_once '../../../utils/php/item_management/get_item_names.php';
+    require_once '../../../utils/php/item_management/get_item_info.php';
     require_once '../../../utils/php/item_management/get_lvlup_res.php';
     require_once '../../../utils/php/time/get_ingame_time.php';
     require_once '../../../utils/php/time/compute_turns_left.php';
