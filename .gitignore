@@ -21,7 +21,8 @@ public/src/private/vars/*.php
 public/src/private/connect_db_function.php
 
 private/config.ini
-public/img/private/
+public/img/icons/**/*.png
+
 
 # GIMP projects #
 #################
