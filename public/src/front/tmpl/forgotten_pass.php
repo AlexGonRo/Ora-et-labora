@@ -15,7 +15,7 @@ function render_my_js_scripts(){
         $(document).ready(function() {
           $('#send_button').on('click', function() {
             var $this = $(this);
-            var loadingText = 'Cargando...';
+            var loadingText = '<div class="spinner-border text-light" role="status"><span class="sr-only">Cargando...</span></div>';
             if ($(this).html() !== loadingText) {
               $this.data('original-text', $(this).html());
               $this.html(loadingText);
@@ -61,7 +61,7 @@ function render_content($alert_msg, $alert_type){
                 </div>
 
                 <button type="submit" class="btn" id="send_button">Enviar</button>
-                
+
 
             </form>
             
