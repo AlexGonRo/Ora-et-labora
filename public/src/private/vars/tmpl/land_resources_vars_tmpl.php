@@ -3,7 +3,7 @@
 
 // Land resources related variables
 
-
+define('FIELD_RES_ID', );
 define('FOREST_RES_ID', );
 define('COAST_RES_ID', );
 define('QUARRY_RES_ID', );
@@ -42,11 +42,3 @@ define('DEFAULT_LAND_RESOURCE_LVL', );
 define('DEFAULT_LAND_RESOURCE_STATUS', );
 define('DEFAULT_LAND_RESOURCE_MANUAL_LIMIT', 'null');
 
-// For fields
-define('FIELD_RES_ID', );
-define('CATTLE_RAISING_ID', );
-define('GRAIN_PROD_ID', );
-define('GRAPE_PROD_ID', );
-define('DEFAULT_FIELD_RESOURCE_GROWING', );
-define('DEFAULT_FIELD_RESOURCE_PREPARED', );
-define('NEEDED_TIME_BEFORE_PREPARED', );   # Minimum amount of months needed until we can harvest a product.

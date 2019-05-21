@@ -3,29 +3,29 @@
  * Scripts for the landing page
  */
         
-require BASE_PATH_PUBLIC.'src/utils/php/time/get_ingame_time.php';
+require_once BASE_PATH_PUBLIC.'src/utils/php/time/get_ingame_time.php';
+require_once BASE_PATH_PUBLIC.'src/utils/php/news_alerts/instant_alerts.php';
 
-
-function get_news($my_session, $db) {
+function get_news() {
     
     
     // Let's get this user's region id
-    $region_query = mysqli_prepare($db,
+    $region_query = mysqli_prepare($GLOBALS['db'],
         'SELECT a.id '
             . 'FROM regions AS a INNER JOIN castles_monasteries AS b ON a.id = b.region_id '
             . 'WHERE b.owner_id=?');
-    mysqli_stmt_bind_param($region_query, "i", $my_session['user_id']);
+    mysqli_stmt_bind_param($region_query, "i", $_SESSION['user_id']);
     mysqli_stmt_bind_result($region_query, $region_id);
     mysqli_stmt_execute($region_query);
     mysqli_stmt_fetch($region_query);
     mysqli_stmt_close($region_query);
  
     // Let's get this user's kingdom id
-    $kingdom_query = mysqli_prepare($db,
+    $kingdom_query = mysqli_prepare($GLOBALS['db'],
         'SELECT kingdom_id '
             . 'FROM users '
             . 'WHERE id=?');
-    mysqli_stmt_bind_param($kingdom_query, "i", $my_session['user_id']);
+    mysqli_stmt_bind_param($kingdom_query, "i", $_SESSION['user_id']);
     mysqli_stmt_bind_result($kingdom_query, $kingdom_id);
     mysqli_stmt_execute($kingdom_query);
     mysqli_stmt_fetch($kingdom_query);
@@ -41,7 +41,7 @@ function get_news($my_session, $db) {
             . " union "
             . "(SELECT date, text FROM news WHERE relevance='global' ORDER BY id)"; // Global kingdom news
     
-    $news_query = mysqli_prepare($db,
+    $news_query = mysqli_prepare($GLOBALS['db'],
         $news_query_text);
     mysqli_stmt_bind_param($news_query, "iii", $resource_id, $region_id, $kingdom_id);
     mysqli_stmt_bind_result($news_query, $date, $text);
@@ -70,26 +70,54 @@ function get_news($my_session, $db) {
 }
 
 
-function get_alerts($my_session, $db){
+function get_alerts($alert_type=-1){
     $alerts = array();
-    // TODO CHANGE ALL THESE PREDEFINED MESSAGES
+    
 
-    // Check if all workers have a task
-    $lazy_worker_query = mysqli_prepare($db,
-        "SELECT task FROM workers WHERE owner_id=? AND (task IS NULL OR task='ninguna')");
-    mysqli_stmt_bind_param($lazy_worker_query, "i", $my_session['user_id']);
-    mysqli_stmt_execute($lazy_worker_query);
-    mysqli_stmt_store_result($lazy_worker_query);    
-
-    if ( mysqli_stmt_num_rows($lazy_worker_query)){
-        $alerts[] = array('msg' => "Algunos de tus trabajadores no tienen una función asignada");
+    /////////////////////
+    // CHECK FOR ALERTS THAT THE USER CAN SOLVE INMEDIATLY
+    /////////////////////
+    
+    $busy_worker_alert = workers_busy();
+    if (count($busy_worker_alert)!=0){
+        $alerts[] = $busy_worker_alert;
     }
-    mysqli_stmt_close($lazy_worker_query);
+    $pantry_full_alert = pantry_full();
+    if (count($pantry_full_alert)!=0){
+        $alerts[] = $pantry_full_alert;
+    }
+    $ware_full_alert = warehouse_full();
+    if (count($ware_full_alert)!=0){
+        $alerts[] = $ware_full_alert;
+    }
+    
+    /////////////////////
+    // CHECK FOR ALERTS THAT OTHER PROCESSES RISED AND MIGHT NEED ATTENTION
+    /////////////////////
+    
+    $other_alerts_query = mysqli_prepare($GLOBALS['db'],
+        "SELECT text, url, type FROM alerts WHERE user_id=?");
+    mysqli_stmt_bind_param($other_alerts_query, "i", $_SESSION['user_id']);
+    mysqli_stmt_bind_result($other_alerts_query, $alert_text, $alert_url, $alert_type);
+    mysqli_stmt_execute($other_alerts_query);
+    mysqli_stmt_store_result($other_alerts_query);    
+
+    if ( mysqli_stmt_num_rows($other_alerts_query)){
+        while (mysqli_stmt_fetch($other_alerts_query)){
+            $alerts[] = array(
+                'img' => "",
+                'msg' => $alert_text,
+                'url' => $alert_url);
+        }
+    }
+    
+    mysqli_stmt_close($other_alerts_query);
+    
 
     return $alerts;
 }
 
-function get_active_actions($my_session, $db){
+function get_active_actions(){
     $active_actions = array();
     
     //Get the current date
@@ -98,11 +126,11 @@ function get_active_actions($my_session, $db){
 
     ########################################
     // Check if any buildings are been updated
-    $buildings_construction_query = mysqli_prepare($db,
+    $buildings_construction_query = mysqli_prepare($GLOBALS['db'],
         'SELECT time_left, name '
-            . 'FROM buildings_current_lvlups INNER JOIN buildings ON buildings.id = buildings_current_lvlups.user_building_id INNER JOIN building_names ON building_names.id = buildings.building_id '
+            . 'FROM buildings_current_lvlups INNER JOIN buildings ON buildings.id = buildings_current_lvlups.user_building_id INNER JOIN buildings_info ON buildings_info.id = buildings.building_id '
             . 'WHERE owner_id=?');
-    mysqli_stmt_bind_param($buildings_construction_query, "i", $my_session['user_id']);
+    mysqli_stmt_bind_param($buildings_construction_query, "i", $_SESSION['user_id']);
     mysqli_stmt_bind_result($buildings_construction_query, $time_left, $building_name);
     mysqli_stmt_execute($buildings_construction_query);
     
@@ -113,12 +141,12 @@ function get_active_actions($my_session, $db){
     mysqli_stmt_close($buildings_construction_query);
 
     // Check if there are any any town buildings been updated
-    $town_buildings_construction_query = mysqli_prepare($db,
+    $town_buildings_construction_query = mysqli_prepare($GLOBALS['db'],
         "SELECT time_left, d.name as town_name, c.name as building_name "
             . "FROM town_buildings_current_lvlups as a INNER JOIN town_buildings as b ON b.id = a.town_building_id "
-            . "INNER JOIN town_building_names as c ON c.id = b.town_building_id "
+            . "INNER JOIN town_buildings_info as c ON c.id = b.town_building_id "
             . "INNER JOIN towns as d ON d.id=b.town_id WHERE owner_id=?");
-    mysqli_stmt_bind_param($town_buildings_construction_query, "i", $my_session['user_id']);
+    mysqli_stmt_bind_param($town_buildings_construction_query, "i", $_SESSION['user_id']);
     mysqli_stmt_bind_result($town_buildings_construction_query, $time_left, $town_name, $building_name);
     mysqli_stmt_execute($town_buildings_construction_query);
     
@@ -130,12 +158,12 @@ function get_active_actions($my_session, $db){
 
         
     // Check if we are updating any land resource
-    $res_construction_query = mysqli_prepare($db,
+    $res_construction_query = mysqli_prepare($GLOBALS['db'],
         "SELECT time_left, d.name as region_name, c.name as res_name "
         . "FROM land_resources_current_lvlups as a INNER JOIN land_resources as b ON b.id = a.land_resource_id "
-        . "INNER JOIN land_resources_names as c ON c.id = b.resource "
+        . "INNER JOIN land_resources_info as c ON c.id = b.resource "
         . "INNER JOIN regions as d ON d.id=b.region_id WHERE b.owner_id=?");
-    mysqli_stmt_bind_param($res_construction_query, "i", $my_session['user_id']);
+    mysqli_stmt_bind_param($res_construction_query, "i", $_SESSION['user_id']);
     mysqli_stmt_bind_result($res_construction_query, $time_left, $region_name, $res_name);
     mysqli_stmt_execute($res_construction_query);
     
@@ -146,11 +174,11 @@ function get_active_actions($my_session, $db){
     mysqli_stmt_close($res_construction_query);
     
     // Inform if any land field is close to harvesting seasson or it's been harvested now
-    $harvest_query = mysqli_prepare($db,
+    $harvest_query = mysqli_prepare($GLOBALS['db'],
         "SELECT b.start, b.end, b.field_resource, d.name "
             . "FROM field_resource as a INNER JOIN field_resource_info as b ON a.growing=b.id INNER JOIN land_resources as c ON a.resource_id=c.id INNER JOIN regions as d ON c.region_id=d.id "
-            . "WHERE c.owner_id=? AND NOT b.field_resource='cattle_raising' AND a.prepared=TRUE");
-    mysqli_stmt_bind_param($harvest_query, "i", $my_session['user_id']);
+            . "WHERE c.owner_id=? AND NOT b.field_resource='cattle_raising' AND a.ready=TRUE");
+    mysqli_stmt_bind_param($harvest_query, "i", $_SESSION['user_id']);
     mysqli_stmt_bind_result($harvest_query, $start, $end, $field_resource, $region_name);
     mysqli_stmt_execute($harvest_query);
     

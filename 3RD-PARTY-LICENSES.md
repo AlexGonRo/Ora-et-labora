@@ -10,6 +10,10 @@ Ora et Labora makes use of 3rd party code for some of its functionalities. Here,
 **Webpage:**: https://jquery.com/
 **License**: [MIT License](https://github.com/jquery/jquery/blob/master/LICENSE.txt)
 
+### Select2
+**Webpage:**: https://jquery.com/
+**License**: [Apache Software Foundation License Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) and [GPL Version 2.0](http://www.gnu.org/licenses/gpl-2.0.html).
+
 ### Composer
 **Webpage:**: https://getcomposer.org/
 **License**: [MIT License](https://github.com/composer/composer/blob/master/LICENSE)

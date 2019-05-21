@@ -27,3 +27,12 @@ function can_lvlup($free_space, $user_id, $required_resources, $building_id){
     
     return $flag;
 }
+
+
+function can_build($free_space, $user_id, $required_resources, $building_id){
+
+    return can_lvlup($free_space + EXISTENCE_BUILDING_SPACE, $user_id, 
+            $required_resources, $building_id);
+    
+    
+}

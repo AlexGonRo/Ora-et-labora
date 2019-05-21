@@ -6,7 +6,7 @@ $my_js_scripts = render_my_js_scripts();
 
 $left_list_html = render_left_menu('castle');
 
-$content_html = render_content($kitchen_text_receipes, $my_kitchen_id, 
+$content_html = render_content($kitchen_text_recipes, $my_kitchen_id, 
         $kit_prod_items, $open_kitchen);
 
 require_once '../masterPage.php';
@@ -14,13 +14,18 @@ require_once '../masterPage.php';
 function render_my_js_scripts(){
     ob_start();
     ?>
+        <!--Select2 script for select option with images -->
+        <link href='../../select2-4.0.7/dist/css/select2.min.css' rel='stylesheet' type='text/css'>
+        <script src='../../select2-4.0.7/dist/js/select2.min.js'></script>
+        <script src='js/pretty_select_prod.js'></script>
+        
         <script src="js/add_delete_prod.js"></script>
     <?php
     return ob_get_clean();
 }
 
 
-function render_content($kitchen_text_receipes, $my_kitchen_id, 
+function render_content($kitchen_text_recipes, $my_kitchen_id, 
         $kit_prod_items, $open_kitchen){ 
     ob_start();
     ?>
@@ -42,8 +47,8 @@ function render_content($kitchen_text_receipes, $my_kitchen_id,
                 <b> Producto: </b>
                     <!-- Create the dropdown list -->
                     <select class="form-control" id='dropdown_kitchen' name='item'>
-                    <?php foreach ($kitchen_text_receipes as $item=>$recipe){ ?>
-                        <option value='<?php echo $item; ?>'><?php echo $recipe; ?></option>
+                    <?php foreach ($kitchen_text_recipes as $item=>$recipe){ ?>
+                        <option value='<?php echo $item; ?>' data-rich="<?php echo $recipe; ?>"><?php echo $recipe; ?></option>
                     <?php } ?>
                     </select> 
                 <br>

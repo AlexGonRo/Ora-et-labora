@@ -3,29 +3,26 @@ if ($_GET) {
     require '../../private/db_connect.php';
     require_once '../../utils/php/other/verify_user.php';
 
+    require_once '../../private/vars/item_vars.php';
+    require_once '../../private/vars/town_building_vars.php';
+    
     require_once '../../utils/php/item_management/has_resources.php';
     require_once '../../utils/php/item_management/get_lvlup_res.php';
     require_once '../../utils/php/item_management/get_item_info.php';
     require_once '../../utils/php/names/get_name.php';
-
-
-    require_once '../../private/vars/item_vars.php';
-    require_once '../../private/vars/building_vars.php';
-    require_once '../../private/vars/town_building_vars.php';
     
 } else {
     session_start(); 
     require_once '../../../private/db_connect.php';
     require_once '../../../utils/php/other/verify_user.php';
+    
+    require_once '../../../private/vars/item_vars.php';
+    require_once '../../../private/vars/town_building_vars.php';
 
     require_once '../../../utils/php/item_management/has_resources.php';
     require_once '../../../utils/php/item_management/get_lvlup_res.php';
     require_once '../../../utils/php/item_management/get_item_info.php';
     require_once '../../../utils/php/names/get_name.php';
-
-    require_once '../../../private/vars/item_vars.php';
-    require_once '../../../private/vars/building_vars.php';
-    require_once '../../../private/vars/town_building_vars.php';
 }
 
 
@@ -77,7 +74,7 @@ mysqli_stmt_close($kingdom_name_query);
 $town_buildings = array();
 $buildings_query = mysqli_prepare($db,
     'SELECT a.id, a.level, a.town_building_id, b.name '
-        . 'FROM town_buildings AS a INNER JOIN town_building_names AS b ON b.id = a.town_building_id '
+        . 'FROM town_buildings AS a INNER JOIN town_buildings_info AS b ON b.id = a.town_building_id '
         . 'WHERE a.town_id=?');
 mysqli_stmt_bind_param($buildings_query, "i", $town_id);
 mysqli_stmt_bind_result($buildings_query, $building_id, $building_level, $main_building_id, $building_name);

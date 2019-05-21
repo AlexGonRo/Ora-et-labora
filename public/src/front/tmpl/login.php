@@ -38,7 +38,7 @@ function render_content(){
       </div>
     </div>
     
-    <div id="login_second_div">
+    <div class="my_box_shadow" id="login_second_div">
       <div class="container">
         <!-- Example row of columns -->
         <div class="row">

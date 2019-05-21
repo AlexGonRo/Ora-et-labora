@@ -13,7 +13,7 @@ require 'town/update_pop.php';
 require 'town/update_params.php';
 require 'resource/produce.php';
 require 'resource/distribute_villagers.php';
-require 'resource/update_prepared_fields.php';
+require 'resource/update_ready_fields.php';
 require 'work/work.php';
 
 # Delete old alerts
@@ -181,7 +181,7 @@ function update_towns($db){
 }
 
 function update_resources($db){
-    update_prepared_fields();
+    update_ready_fields();
 }
 
 

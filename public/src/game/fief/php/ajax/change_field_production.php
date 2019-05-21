@@ -41,25 +41,25 @@ mysqli_stmt_close($field_info_query);
 
 # Let's see if the field would be ready on time
 if ($new_production==CATTLE_RAISING_ID){
-    $prepared=1;
+    $ready=1;
 } else {
     if ($month >= $start && $month <= $end){    # If we should aready be harvesting...
-        $prepared = 0;
+        $ready = 0;
     } else {
-        if (($start+12)-$month < NEEDED_TIME_BEFORE_PREPARED OR ($start+12)-$month > 12){ # If we do NOT have enough time to prepare
-            $prepared = 0;
+        if (($start+12)-$month < NEEDED_TIME_BEFORE_READY OR ($start+12)-$month > 12){ # If we do NOT have enough time to prepare
+            $ready = 0;
         } else  {
-            $prepared = 1;
+            $ready = 1;
         }
     }
 }
 # Compute how many turns are left until next the harvest
-list($deadline_day, $deadline_month, $deadline_year) = get_deadline($month, $year, $start, $end, $prepared);
+list($deadline_day, $deadline_month, $deadline_year) = get_deadline($month, $year, $start, $end, $ready);
 $turns_left = compute_turns_left($day, $month, $year, $deadline_day, $deadline_month, $deadline_year, $time_speed);  
 
 $get_role_query = mysqli_prepare($db,
-    'UPDATE field_resource SET growing=?, prepared=?  WHERE resource_id=?');
-mysqli_stmt_bind_param($get_role_query, "iii", $new_production, $prepared, $resource_id);
+    'UPDATE field_resource SET growing=?, ready=?  WHERE resource_id=?');
+mysqli_stmt_bind_param($get_role_query, "iii", $new_production, $ready, $resource_id);
 mysqli_stmt_execute($get_role_query);
 mysqli_stmt_close($get_role_query);
 

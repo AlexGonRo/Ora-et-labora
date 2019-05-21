@@ -1,6 +1,7 @@
 <?php
 require_once '../../utils/php/other/render_left_menu.php';
-
+require_once '../../utils/php/time/get_ingame_time.php';
+require_once '../../utils/php/time/format_time.php';
 # ------------------------------------
 # Master page logic
 #-------------------------------------
@@ -32,14 +33,9 @@ mysqli_stmt_fetch($new_messages_query);
 mysqli_stmt_close($new_messages_query);
 
 // Get ingame time
-$ingame_time_query = mysqli_prepare($db,
-    "SELECT value_char FROM variables WHERE name='time'");
-mysqli_stmt_bind_result($ingame_time_query, $ingame_time);
-mysqli_stmt_execute($ingame_time_query);
-mysqli_stmt_fetch($ingame_time_query);
-mysqli_stmt_close($ingame_time_query);
 
-$ingame_time_str = str_replace("_", "-", $ingame_time)
+list($day, $month, $year, $time_speed)  = get_ingame_time();
+$ingame_time_str = format_time($day, $month, $year)
 
 ?>
 <!DOCTYPE html>
@@ -121,8 +117,8 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
                         ?>
                         <!-- <td><center>Rango: TO DO</center></td> -->
                         <b>Ubicación: </b> <?php echo "<a href='".BASE_URL."src/game/map/region.php?id=$char_location_id'>$char_location_name</a>" ?><br>
-                        <b>Prestigio: </b> <?php echo $fame ?><br>
-                        <b>Oro: </b> <?php echo $money ?><br>
+                        <b>Prestigio: </b> <?php echo $fame ?> <img id="prestige" src="../../../img/icons/items/prestige.png" alt="Prestigio" height="16px" width="16px"><br>
+                        <b>Oro: </b> <?php echo $money ?> <img id="prestige" src="../../../img/icons/items/money/money(rich).png" alt="Oro" height="16px" width="16px"><br>
                         <b>Fecha: </b> <?php echo $ingame_time_str?> <br>
                 </div>
                 
@@ -183,7 +179,7 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
                     </div>
                   </li>
                   <li class="nav-item my_navbar_list_item">
-                    <a class="nav-link my_navbar_list_a" href="#">Foro</a>
+                    <a class="nav-link my_navbar_list_a" href="http://orabora.net/forum/">Foro</a>
                   </li>
                   <li class="nav-item my_navbar_list_item">
                     <a class="nav-link my_navbar_list_a" href="../help/index.php">Ayuda</a>
@@ -197,7 +193,7 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
     
         <!-- General user information -->
         <div id="user_info">
-            <table id="user_info_table">
+            <table id="user_info_table" class="my_box_shadow">
                 <tbody>
                     <tr>
                         <td><center><?php
@@ -210,8 +206,8 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
                         </center></td>
                         <!-- <td><center>Rango: TO DO</center></td> -->
                         <td><center><b>Ubicación: </b> <?php echo "<a href='".BASE_URL."src/game/map/region.php?id=$char_location_id'>$char_location_name</a>" ?></center></td>
-                        <td><center><b>Prestigio: </b> <?php echo $fame ?></center></td>
-                        <td><center><b>Oro: </b> <?php echo $money ?></center></td>
+                        <td><center><b>Prestigio: </b> <?php echo $fame ?> <img id="prestige" src="../../../img/icons/items/prestige.png" alt="Prestigio" height="16px" width="16px"></center></td>
+                        <td><center><b>Oro: </b> <?php echo $money ?> <img id="prestige" src="../../../img/icons/items/money/money(rich).png" alt="Oro" height="16px" width="16px"></center></td>
                         <td><center><b>Fecha: </b> <?php echo $ingame_time_str?></center></td>
                     </tr>
                 </tbody>
@@ -219,7 +215,7 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
        </div>
 
         <!--Space for pop-->
-        <div class="my_alerts">
+        <div class="my_alerts container-fluid">
             <?php echo $alerts_html ?? ''; ?>
         </div>
         
@@ -229,7 +225,7 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
     <div class="container-fluid my_body">
         <div class="row">
             <div class="col-md-2 d-none d-md-block pr-md-1">
-                <div class="left_body">
+                <div class="left_body my_box_shadow">
                     <div class="left_menu">
                         <ul class="left_list">
                             <?php echo $left_list_html ?? ''; ?>
@@ -239,7 +235,7 @@ $ingame_time_str = str_replace("_", "-", $ingame_time)
             </div>
 
             <div class="col-md-10 col-sm-12 col-xs-12 no_padding_tablet_phone">
-                <div class="right_body">
+                <div class="right_body my_box_shadow">
                     <div class="page_title horizontal_separator pb-1 mb-3">
                         <h3> <b><?php echo $page_title; ?> </b></h3>
                     </div>

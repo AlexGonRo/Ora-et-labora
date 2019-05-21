@@ -41,7 +41,7 @@ function render_content(){
 
       <div class="row">
 
-        <div class="p-5 front_text_body" >
+        <div class="p-5 front_text_body my_box_shadow" >
           <h4 class="justify-content-between align-items-center mb-3">
             <span class="text-muted">El juego</span>
           </h4>

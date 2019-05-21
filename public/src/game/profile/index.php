@@ -3,8 +3,8 @@ session_start();
 require '../../private/db_connect.php';
 require '../../utils/php/other/verify_user.php';
 require '../../utils/php/other/render_left_menu.php';
+require '../../utils/php/news_alerts/get_news_alerts.php';
 
-require 'php/get_news_alerts.php';
 
 require '../../private/vars/moving_to_peninsula_vars.php';
 
@@ -65,9 +65,9 @@ if ($my_kingdom_id == INIT_KINGDOM_ID) {
     $days_left = MAX_DAYS_IN_HEAVEN - $days;
 }
 
-$news = get_news($_SESSION, $db);
-$alerts = get_alerts($_SESSION, $db);
-$active_actions = get_active_actions($_SESSION, $db);
+$news = get_news();
+$alerts = get_alerts();
+$active_actions = get_active_actions();
         
 
 require "tmpl/index.php";

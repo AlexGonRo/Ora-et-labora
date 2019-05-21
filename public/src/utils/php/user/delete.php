@@ -91,7 +91,7 @@ function delete_user($user_id){
     # --------------------------
     $reset_field_query = mysqli_prepare($db,
         'UPDATE field_resource AS a INNER JOIN land_resources AS b ON a.resource_id = b.id '
-            . 'SET a.growing = '.DEFAULT_FIELD_RESOURCE_GROWING.', a.prepared = '.DEFAULT_FIELD_RESOURCE_PREPARED.' '
+            . 'SET a.growing = '.DEFAULT_FIELD_RESOURCE_GROWING.', a.ready = '.DEFAULT_FIELD_RESOURCE_READY.' '
             . 'WHERE b.owner_id = ?');
     mysqli_stmt_bind_param($reset_field_query, "i", $user_id);
     mysqli_stmt_execute($reset_field_query);

@@ -50,10 +50,10 @@ function render_content($registration_errors, $default_char_name,
             </div>
         </div>
         <?php } ?>
-      <div class="row p-4" id="main_register_div">
+      <div class="row p-4 my_box_shadow" id="main_register_div">
         <!--Lateral helping panel-->
         <div class="col-md-5 order-md-2 mb-4 ">
-            <div class="m-md-5 p-md-4 p-2" id="register_helping_box">
+            <div class="m-md-5 p-md-4 p-2 my_box_shadow" id="register_helping_box">
               <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-muted">Descripción</span>
               </h4>

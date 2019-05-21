@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-expand-md fixed-top my_front_navbar">
+  <nav class="navbar navbar-expand-md fixed-top my_front_navbar my_lighter_box_shadow">
     
     <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" 
             data-target="#my_front_navbar">
@@ -14,14 +14,21 @@
     <div class="collapse navbar-collapse sidenav" id="my_front_navbar">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item px-2 my_title_navbar_item">
-          <a class="nav-link" disabled href="#">Ranking</a>
+          <a class="nav-link" disabled href="http://orabora.net/forum/">Foro</a>
         </li>
+        
         <li class="nav-item px-2 my_title_navbar_item">
-          <a class="nav-link" href="https://github.com/AlexGonRo/Ora-et-labora/issues">Foro</a>
+          <a class="nav-link" disabled href="http://orabora.net/dev_blog/">Blog de desarrollo</a>
         </li>
+        
         <li class="nav-item px-2 my_title_navbar_item">
-          <a class="nav-link" disabled href="#">Redes sociales</a>
+            <a class="nav-link" href="https://twitter.com/Ora_et_Labora_g"><img src="../../img/social_net_logos/Twitter/Twitter_SocialIcon_RoundedSquare/Twitter_Social_Icon_Rounded_Square_Color.svg" class="img-fluid" alt="Responsive image" > Twitter</a>
         </li>
+        
+        <li class="nav-item px-2 my_title_navbar_item">
+            <a class="nav-link" href="https://discord.gg/zcZ5H3"><img src="../../img/social_net_logos/Discord/Discord-Logo-Black.svg" class="img-fluid" alt="Responsive image" > Discord</a>
+        </li>
+        
       </ul>
     </div>
     
@@ -40,7 +47,7 @@
   <div class="navbar_padding">    <!-- We need this padding because we have a menu on top --> 
   </div>
 
-<div id="login-dp" class="col-md-2 collapse navbar-collapse login_sidenav">
+<div id="login-dp" class="col-md-2 collapse navbar-collapse login_sidenav my_box_shadow">
     <div id="login-dp-padding">
         <div class="row">
           <div class="col-md-12">

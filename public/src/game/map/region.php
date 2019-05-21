@@ -60,7 +60,7 @@ mysqli_stmt_close($towns_query);
 $resources = array();
 $res_query = mysqli_prepare($db,
     'SELECT a.id, c.name, a.owner_id '
-        . 'FROM land_resources AS a INNER JOIN land_resources_names AS c ON c.id=a.resource '
+        . 'FROM land_resources AS a INNER JOIN land_resources_info AS c ON c.id=a.resource '
         . 'WHERE a.region_id=?');
 mysqli_stmt_bind_param($res_query, "i", $region_id);
 mysqli_stmt_bind_result($res_query, $res_id, $res_name, 

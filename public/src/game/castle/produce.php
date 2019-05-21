@@ -6,13 +6,13 @@ require '../../utils/php/other/render_left_menu.php';
 
 require "../../private/vars/building_vars.php";
 
-require '../../utils/php/item_prod/prod_options.php';
+require 'php/prod_options.php';
 
 
 # Get kitchen id
 $get_kit_id_query = mysqli_prepare($db,
     "SELECT a.id, a.building_id, name "
-        . "FROM buildings AS a INNER JOIN building_names AS b "
+        . "FROM buildings AS a INNER JOIN buildings_info AS b "
         . "ON a.building_id = b.id "
         . "WHERE owner_id=? AND a.building_id=".KITCHEN_ID);
 mysqli_stmt_bind_param($get_kit_id_query, "i", $_SESSION['user_id']);
@@ -30,16 +30,20 @@ mysqli_stmt_close($get_kit_id_query);
 
 
 # Get a list of all the items we can produce in the kitchen
-list($kitchen_prod_options_ids, $kitchen_prod_options_names) = prod_options(KITCHEN_ID);
-# Code the receipes in a text format so the user can understand
-$kitchen_text_receipes = array();
+list($kitchen_prod_options_ids, $kitchen_prod_options_names, $kit_prod_img) = prod_options(KITCHEN_ID);
+# Code the recipes in a text format so the user can understand
+# TODO We have html text here in the PHP section. Not good
+$kitchen_text_recipes = array();
 foreach ($kitchen_prod_options_names as $item=>$ingredients_array){ 
-    $text = ucfirst($item)." <= ";
+    $text = "<img src='../../../".$kit_prod_img[$item]."' style='vertical-align: text-top;' height='16px' width='16px'> ";
+    $text .= ucfirst($item)." <= ";
     foreach ($ingredients_array as $ing){
-        $text = $text . lcfirst($ing[0]) ."($ing[1]), ";
+        $text = $text 
+                . "<img src='../../../".$kit_prod_img[$ing[0]]."' style='vertical-align: text-top;' height='16px' width='16px'> " # Image 
+                . lcfirst($ing[0]) ."($ing[1]), ";  #Text
     }
-    $text = substr($text, 0, -2);
-    $kitchen_text_receipes[$item] = $text;
+    $text = substr($text, 0, -2);   # Delete last space and colon
+    $kitchen_text_recipes[$item] = $text;
 }
 
 

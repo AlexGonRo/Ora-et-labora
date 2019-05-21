@@ -30,11 +30,10 @@ if (!$flag) {
     return ;
 }
 # Consume those resources
-
 consume_items($user_id, $required_resources);
 
 
-# Update the building information
+# Start leveling up the building
 $get_lvlup_time_query = mysqli_prepare($GLOBALS['db'],
     "SELECT lvlup_time FROM buildings_lvlup_time WHERE building_id=? AND level=?");
 mysqli_stmt_bind_param($get_lvlup_time_query, "ii", $building_id, $level);

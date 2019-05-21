@@ -9,18 +9,28 @@
 
 <url>
   <loc>http://orabora.net/front/login.php</loc>
-  <lastmod>2018-12-19T17:17:31+00:00</lastmod>
+  <lastmod>2019-05-02T12:00:00+00:00</lastmod>
   <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.orabora.net/dev_blog/</loc>
+  <lastmod>2019-05-02T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://orabora.net/forum/</loc>
+  <lastmod>2019-05-02T12:00:00+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://orabora.net/front/register.php</loc>
   <lastmod>2018-12-19T17:17:31+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>http://orabora.net/front/about.php</loc>
   <lastmod>2018-12-19T17:17:31+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>http://orabora.net/front/terms.php</loc>

@@ -12,6 +12,7 @@ public/src/jquery/
 # Other 3rd party libraries #
 ############
 public/src/ImageViewer
+public/src/select2*
 
 # Composer files#
 ############
@@ -26,7 +27,7 @@ public/src/private/connect_db_function.php
 
 private/config.ini
 public/img/icons/**/*.png
-
+public/img/icons/**/*.svg
 
 # GIMP projects #
 #################

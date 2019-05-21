@@ -20,11 +20,11 @@ function compute_turns_left($current_day, $current_month, $current_year,
     return $turns_left;
 }
 
-function get_deadline($current_month, $current_year, $start_month, $end_month, $prepared){
+function get_deadline($current_month, $current_year, $start_month, $end_month, $ready){
     // TODO This function really needs to be tested again
     # Let's compute how many turns are left until the harvest starts/ends
     $month_names = array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre', 'Enero');
-    if ($current_month >= $start_month && $current_month <= $end_month && $prepared){ # The harvest is already active   // TODO This formula gives problems if harvest seasson happens in months such as december
+    if ($current_month >= $start_month && $current_month <= $end_month && $ready){ # The harvest is already active   // TODO This formula gives problems if harvest seasson happens in months such as december
         if ($end_month==12){
             $deadline_day = 1;
             $deadline_month = 1;
@@ -36,7 +36,7 @@ function get_deadline($current_month, $current_year, $start_month, $end_month, $
         }
     } else { # This deadline is for a harvest that has not started already
 
-        if (!$prepared){
+        if (!$ready){
             if ($current_month > $start_month){
                     $deadline_day = 1;
                     $deadline_month = $start_month;

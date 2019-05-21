@@ -36,11 +36,11 @@ function field_prod($db, $resource_id, $level, $status, $n_workers){
     
     # Check if field is currently producing something
     $field_query = mysqli_prepare($db,
-            'SELECT growing, prepared, start, end '
+            'SELECT growing, ready, start, end '
                 . 'FROM field_resource AS a INNER JOIN field_resource_info AS b ON a.growing=b.id '
                 . 'WHERE a.resource_id=?');
     mysqli_stmt_bind_param($field_query, 'i', $resource_id);
-    mysqli_stmt_bind_result($field_query, $growing, $prepared, $start, $end);
+    mysqli_stmt_bind_result($field_query, $growing, $ready, $start, $end);
     mysqli_stmt_execute($field_query);
     mysqli_stmt_fetch($field_query);
     mysqli_stmt_close($field_query);
@@ -48,7 +48,7 @@ function field_prod($db, $resource_id, $level, $status, $n_workers){
     list($day, $month, $year) = get_ingame_time();
 
     # If we can harvest
-    if ($prepared && $month >= $start && $month <= $end) {
+    if ($ready && $month >= $start && $month <= $end) {
         if ($growing == CATTLE_RAISING_ID){
             $production[MEAT_ID] = round(($n_workers*FIELD_EFF_MEAT) * LVL_BONUS_RES[$level-1] * $status/100);
             $production[MILK_ID] = round(($n_workers*FIELD_EFF_MILK) * LVL_BONUS_RES[$level-1] * $status/100);

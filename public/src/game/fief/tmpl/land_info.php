@@ -94,7 +94,7 @@ if ($resource_type==FIELD_RES_ID){ ?>
         <?php } ?>
             
                 
-        <?php if ($month >= $start && $month <= $end && $prepared){ ?>
+        <?php if ($month >= $start && $month <= $end && $ready){ ?>
             <span id='production_time_info'>¡Estamos produciendo hasta <span id='month'><?php echo MONTH_NAMES_ES[$end]; ?></span>!(Quedan <span id='turns_left'><?php echo $turns_left; ?></span> ciclos)</span><br>
         <?php } else { ?>
             <span id='production_time_info'>La producción comenzará en <span id='month'><?php echo MONTH_NAMES_ES[$start-1]; ?></span>(Quedan <span id='turns_left'><?php echo $turns_left; ?></span> ciclos)</span><br>                

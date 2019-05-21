@@ -16,6 +16,7 @@ function render_my_js_scripts(){
     ob_start();
     ?>
         <script src="js/move_player.js"></script>
+        <script src="js/next_tutorial.js"></script>
     <?php
     return ob_get_clean();
 }
@@ -49,14 +50,16 @@ function render_alerts($welcome, $need_tutorial, $still_in_France, $days_left){
             <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">TUTORIAL</h4>
+                  <h4 class="modal-title">¡BIENVENIDO A <b>ORA ET LABORA</b>!</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body">
-                <p>¡¡BIENVENIDO AL TUTORIAL!!.</p>
+                  <p><b>Ora et Labora</b> es un proyecto en curso y mantenido por desarrolladores sin ningún tipo de ánimo de lucro. Por favor, ten en cuenta que <b>el juego se encuentra en las  primeras fases del desarrollo</b> y, por lo tanto, muchas de las funcionalidades no funcionan correctamente o ni siquiera están implementadas. </p>
+                  <p>Si quieres obtener información sobre el desarrolo, te recomendamos visitar el <a href="http://www.orabora.net/dev_blog/">blog</a> o el <a href="https://github.com/AlexGonRo/Ora-et-labora">código del proyecto</a>. Si quieres colaborar, ¡<a href="mailto:administrador@orabora.net" target="_top">No dudes en contactarnos</a>!</p>
+                  <p>¡Muchas gracias por tu registro!  </p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal" onclick="next_tutorial()">¡Entendido!</button>
               </div>
             </div>
 
@@ -147,11 +150,12 @@ function render_content($news, $alerts, $active_actions){
                         <div id="alerts" class="overview_table">
                             <table class='table table-hover'>
                             <?php if (empty($alerts)){ ?>
-                                <tr><td colspan='2'>No parece haber alertas pendientes.</td></tr>
+                                <tr><td>No parece haber alertas pendientes.</td></tr>
                             <?php } 
                             foreach ($alerts as $alert){ ?>
                                 <tr>
-                                <td width='90%'><?php echo $alert['msg']?></td>
+                                    <td><img style="vertical-align:central;" src="<?php echo $alert['img']?>" alt="Alerta" height="16px" width=16px"></td>
+                                    <td><a class="no_color_link" href="<?php echo $alert['url']?>"><?php echo $alert['msg']?></a></td>
                                 </tr>
                             <?php } ?>
                             </table>

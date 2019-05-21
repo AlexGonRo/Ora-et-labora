@@ -41,7 +41,7 @@ function render_content($alert_msg, $alert_type){
       <div class="row">
           
         
-        <div class="p-5 front_text_body col-12" >
+        <div class="p-5 front_text_body col-12 my_box_shadow" >
             <div id="alerts">
                 <?php if($alert_msg != ''){ ?>
                     <div class="alert alert-<?php echo $alert_type;?>" role="alert">

@@ -379,13 +379,15 @@ function register($family_name, $char_name, $property_name, $email, $password, $
         $query = "INSERT INTO `buildings`(`building_id`, `owner_id`, `castle_mon_id`)"
             . " VALUES (".PATIO_ID.", ? , ?)";
     }
-    $query = $query . ", (".KITCHEN_ID.", ? , ?), (".PANTRY_ID.", ? , ?), (".WAREHOUSE_ID.", ? , ?), (".DORMITORY_ID.", ? , ?)";
+    $query = $query . ", (".KITCHEN_ID.", ? , ?), (".PANTRY_ID.", ? , ?), (".WAREHOUSE_ID.", ? , ?), "
+            . "(".DORMITORY_ID.", ? , ?), (".WORKSHOP_ID.", ? , ?)";
     
     try {
         $create_buildings_query = mysqli_prepare($GLOBALS['db'], $query);
         
         mysqli_stmt_bind_param($create_buildings_query, "iiiiiiiiii", $user_id, $castle_id, 
-                $user_id, $castle_id, $user_id, $castle_id, $user_id, $castle_id, $user_id, $castle_id);
+                $user_id, $castle_id, $user_id, $castle_id, $user_id, $castle_id, 
+                $user_id, $castle_id, $user_id, $castle_id);
         mysqli_stmt_execute($create_buildings_query);
         mysqli_stmt_close($create_buildings_query);
     

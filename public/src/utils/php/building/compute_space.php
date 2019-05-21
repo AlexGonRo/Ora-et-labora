@@ -4,25 +4,25 @@ require_once BASE_PATH_PUBLIC.'src/private/vars/building_vars.php';
 
 function compute_building_space($db, $user_id){
 
-$building_info_query = mysqli_prepare($db,
-        'SELECT building_id, level FROM buildings WHERE owner_id= ?');
-mysqli_stmt_bind_param($building_info_query, "i", $user_id);
-mysqli_stmt_bind_result($building_info_query, $user_building_id, $level);
-mysqli_stmt_execute($building_info_query);
+    $building_info_query = mysqli_prepare($db,
+            'SELECT building_id, level FROM buildings WHERE owner_id= ?');
+    mysqli_stmt_bind_param($building_info_query, "i", $user_id);
+    mysqli_stmt_bind_result($building_info_query, $user_building_id, $level);
+    mysqli_stmt_execute($building_info_query);
 
 
-$occupied = 0;  # Occupied space
-while (mysqli_stmt_fetch($building_info_query)) {
-    if (!in_array($user_building_id, MAIN_BUILDING_IDS)){
-        $occupied += EXISTENCE_BUILDING_SPACE; # Just having the building consumes space 
-        $occupied += $level;
-    } else {
-        $total_space = MAIN_BUILDING_SPACE[$level-1];
+    $occupied = 0;  # Occupied space
+    while (mysqli_stmt_fetch($building_info_query)) {
+        if (!in_array($user_building_id, MAIN_BUILDING_IDS)){
+            $occupied += EXISTENCE_BUILDING_SPACE; # Just having the building consumes space 
+            $occupied += $level;
+        } else {
+            $total_space = MAIN_BUILDING_SPACE[$level-1];
+        }
     }
-}
-mysqli_stmt_close($building_info_query);
+    mysqli_stmt_close($building_info_query);
 
-return array($occupied, $total_space);
+    return array($occupied, $total_space);
 
 }
 

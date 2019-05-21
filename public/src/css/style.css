@@ -98,12 +98,38 @@ my_body {
 }
 
 .centered_td {
-   text-align: center;   
+   text-align: center;
+   vertical-align: middle !important; 
 }
 
 .right_td {
    text-align: right;   
 }
+
+.flatten_btn{
+        padding-left: 2em !important;
+        padding-right: 2em !important;
+        padding-top: 0.4em !important;
+        padding-bottom: 0.4em !important;
+        margin-left: 0.5em !important;
+        margin-right: 0.5em !important;
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        border-radius: 5px !important;
+}
+
+.no_color_link{
+    color: inherit;
+}
+
+.my_box_shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.my_lighter_box_shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+
 
 /*******************************************
 ********************************************
@@ -210,14 +236,19 @@ my_body {
     color: black;
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     .my_title_navbar_item{
-        font-size: 2vw;
+        font-size: 1.6vw;
         color: black;
+        border-left: 3px double #a96113;
     }
 }
 
-
+@media (min-width: 1200px) {
+    .my_title_navbar_item{
+        border-left: 3px double #a96113;
+    }
+}
 
 .my_title_navbar_item a {
     color: black;
@@ -226,6 +257,11 @@ my_body {
     color: white;
 }
 
+.my_title_navbar_item img{
+    height: 1.2em;
+    width: auto;
+    vertical-align: middle;
+}
 
 #login_first_div {
     padding: 4rem 2rem;
@@ -278,7 +314,6 @@ my_body {
     border-top-right-radius: 0rem;
     right: 0;
     left: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 #login-dp-padding{
@@ -294,12 +329,10 @@ my_body {
 #register_helping_box{
     background-color: white;  /*A brighter version of our brown color*/
     border-radius: 3px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .front_text_body{
     border-radius: 3px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: #ffffff;
     margin-bottom: 15px;
 }
@@ -395,7 +428,6 @@ my_body {
         border: 1px solid #A96113;
 
         border-radius: 3px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         background: #ffffff;
     }
 
@@ -422,7 +454,6 @@ my_body {
 /*    background: #DDBB96;
     border: 1px solid #A96113;*/
     border-radius: 3px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: #ffffff;
     padding: 10px 0px 10px 15px;
 }
@@ -465,7 +496,6 @@ my_body {
 
 .right_body{
     border-radius: 3px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: #ffffff;
     padding: 15px 20px 15px 20px;
     margin-bottom: 5px;
@@ -556,6 +586,38 @@ my_body {
 ********************************************/
 
 
+/*******************************************
+********************************************
+* STYLES FOR STABLE
+********************************************
+********************************************/
+
+.bg_chicken{
+    background-color: #007bff !important;
+}
+.bg_goose{
+    background-color: #28a745 !important;
+}
+.bg_sheep{
+    background-color: #17a2b8 !important;
+}
+.bg_pig{
+    background-color: #ffc107 !important;
+}
+.bg_cow{
+    background-color: #343a40 !important;
+}
+.bg_horse{
+    background-color: #6c757d !important;
+}
+.bg_empty{
+    background-color: #f8f9fa !important;
+}
+
+.square {
+  padding-left: 20px;
+  border-radius: 5px;
+}
 
 /*******************************************
 ********************************************

@@ -133,7 +133,7 @@ function login_with_credentials($errors){
         
     } else {
         # If passwords didn't match
-        array_push($errors, "Wrong username/password combination");
+        array_push($errors, "La combinación 'Usuario-Contraseña' no es correcta.");
     }
   }
   return $errors;

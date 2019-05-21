@@ -58,7 +58,6 @@ if($user_id == $owner_id){
     $my_resource = True;
 }
 
-
 # Get family name of the owner
 $owner_name = get_username($user_id);
 # Get region's name
@@ -128,11 +127,11 @@ if (!$under_construction){
 if ($resource_type==FIELD_RES_ID){
     # What's been grown?
     $growing_query = mysqli_prepare($GLOBALS['db'],
-        "SELECT a.prepared, b.field_resource, b.start, b.end "
+        "SELECT a.ready, b.field_resource, b.start, b.end "
             . "FROM field_resource as a INNER JOIN field_resource_info as b ON a.growing=b.id "
             . "WHERE a.resource_id= ?" );
     mysqli_stmt_bind_param($growing_query, "i", $resource_id);
-    mysqli_stmt_bind_result($growing_query, $prepared, $field_resource, $start, $end);
+    mysqli_stmt_bind_result($growing_query, $ready, $field_resource, $start, $end);
     mysqli_stmt_execute($growing_query);
     mysqli_stmt_fetch($growing_query);
     mysqli_stmt_close($growing_query);
@@ -142,7 +141,7 @@ if ($resource_type==FIELD_RES_ID){
     list($day, $month, $year, $time_speed) = get_ingame_time();
     
     # Compute how many turns are left until the end/start of the harvest
-    list($deadline_day, $deadline_month, $deadline_year) = get_deadline($month, $year, $start, $end, $prepared);
+    list($deadline_day, $deadline_month, $deadline_year) = get_deadline($month, $year, $start, $end, $ready);
     $turns_left = compute_turns_left($day, $month, $year, $deadline_day, $deadline_month, $deadline_year, $time_speed);
 
 }

@@ -2,15 +2,40 @@ I did not create many of the graphical resources that you may find in this direc
 
 Here you can find a list of all the graphical resources I used and where they all came from:
 
+default.png -> My own
+
+items/
+
+items.png -> https://opengameart.org/content/barrels-mage-city-arcanos-rework (modified)
+prestige.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+
 items/food/
 
 grain.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+barley.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/ (modified)
 grape.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
-water.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
-apple.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+fruit.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
 meat_and_fish.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/ (modified)
-carrot.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+vegetables.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
 local_species ->  https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+egg.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+cheese.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+bread.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+meat.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+milk.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/) (modified)
+cake.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+honey.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+olives.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/ (modified)
+gachas.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+cocido.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+oil.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+vinegar.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg (modified)
+wine.png -> https://opengameart.org/content/rpg-item-set
+expensive_spices.png -> combined
+spiced_cheese.png -> combined
+spiced_bread.png -> combined
+spiced_wine.png -> combined
+exp_spiced_wine.png -> combined
 
 /other/
 
@@ -21,6 +46,12 @@ killed_in_combat.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-p
 dead.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
 slave.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
 message.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+villager.png -> https://opengameart.org/content/pixel-people-extras-01 (modified)
+bourgeois.png -> https://opengameart.org/content/pixel-people-extras-01 (modified)
+alert.png -> my own.
+warning.png -> my own.
+star.png -> my own.
+half_star.png -> my own.
 
 items/raw_materials/
 
@@ -29,6 +60,8 @@ wood.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/ 
 silver.png -> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger) (modified)
 iron.png -> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger) (modified)
 stone.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+wax.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+water.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
 
 items/money/
 
@@ -37,15 +70,83 @@ money(rich).png-> https://opengameart.org/content/gold-treasure-icons(Author: Cl
 money(very_rich).png-> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger)
 money.png-> https://opengameart.org/content/gold-treasure-icons(Author: Clint Bellanger)
 
+items/construction/
+mortar.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+stained_glass.png -> https://opengameart.org/content/10-pixel-art-stained-glass-windows
+carved_stone.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+quicklime.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/) (modified)
+glass.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+bars.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg (modified)
+
+
+items/copy/
+papyrus.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/) (modified)
+book.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+feather.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+ink.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+candle.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/) (modified)
+books/-> https://opengameart.org/content/kyrises-free-16x16-rpg-icon-pack (Kyrise's Free 16x16 RPG Icon Pack | Graphics made by Kyrise: https://kyrise.itch.io/)
+paper.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+expensive_ink.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+
+
+items/war/
+bow.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+sword.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/) (modified)
+fanzy_armor.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+
+items/health/
+bandage.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+basic_medicine.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+
+items/clothing/
+cotton.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+cheap_clothes.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+expensive_clothes.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+fur.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+linen_cloth.png -> https://opengameart.org/content/rpg-item-set
+wool.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/) (modified)
+
+items/jewelry/
+
+ring.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+candle -> https://opengameart.org/content/rpg-item-set
+candelabra -> https://opengameart.org/content/rpg-item-set
+
+
+items/tools_furniture/
+dishes -> https://opengameart.org/content/rpg-item-set
+
+unused/
+
+water.png -> https://www.gamedevmarket.net/asset/16x16-icons-for-rpg-pack-1-915/
+necklace.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+fur.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+rocks.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+autumn.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+spring.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg (modified)
+spring_2.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+time.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+
+/animals/
+
+cow.png -> https://www.gamedevmarket.net/asset/animals-rpg-sprites-8008/
+sheep.png -> https://www.gamedevmarket.net/asset/animals-rpg-sprites-8008/
+pig.png -> https://www.gamedevmarket.net/asset/animals-rpg-sprites-8008/
+chicken.png -> https://www.gamedevmarket.net/asset/animals-rpg-sprites-8008/
+duck.png -> https://www.gamedevmarket.net/asset/animals-rpg-sprites-8008/
+horse.png -> https://www.gamedevmarket.net/asset/animals-rpg-sprites-8008/
+
+
 /land_resources/
 
-mine.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
-forest.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
 town.png -> https://www.gamedevmarket.net/asset/rpg-overworld-tileset/ (modified)
 village.png -> https://www.gamedevmarket.net/asset/rpg-overworld-tileset/ (modified)
 river.png -> https://www.gamedevmarket.net/asset/rpg-overworld-tileset/ (modified)
-field.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/) and https://www.gamedevmarket.net/asset/animals-rpg-sprites-8008/
 coast.png -> https://www.gamedevmarket.net/asset/rpg-overworld-tileset/ (modified)
+forest.png -> (Not public) https://www.gamedevmarket.net/asset/rpg-overworld-tileset/
+field.png -> (Not public) https://www.gamedevmarket.net/asset/rpg-overworld-tileset/
+mine.png -> (Not public) https://www.gamedevmarket.net/asset/rpg-overworld-tileset/
 
 /actions/
 
@@ -53,3 +154,51 @@ steal.png - https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License
 kill.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
 receive_money.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
 pay_money.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+create_medicine.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+farm.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+build.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+write.png -> https://opengameart.org/content/rpg-item-set
+mine.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+cut_wood.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+cattle raising.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/) and https://www.gamedevmarket.net/asset/animals-rpg-sprites-8008/
+
+/health/
+
+travelling.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+wounded.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+enlightened.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+strength_up.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+strength_down.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+brain.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+health.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+lungs.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+stomach.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+pain.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+fever.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+feeling_great.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+love.png-> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/)
+heresy.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+
+
+/transport/
+
+ship.png -> https://opengameart.org/content/16x16-fantasy-pixel-art-vehicles (By DualR)
+cart_1.png -> https://opengameart.org/content/16x16-fantasy-pixel-art-vehicles (By DualR)
+cart_2.png -> https://opengameart.org/content/16x16-fantasy-pixel-art-vehicles (By DualR)
+
+/seasons/
+
+winter.svg -> https://opengameart.org/content/season-symbols
+sprint.svg -> https://opengameart.org/content/season-symbols
+summer.svg -> https://opengameart.org/content/season-symbols
+autumn.svg -> https://opengameart.org/content/season-symbols (modified)
+
+/weather/
+ 
+sunny.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+cloudy.png -> https://opengameart.org/content/lightning-cloud-0
+foggy.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+rainy.png -> https://shikashiassets.itch.io/shikashis-fantasy-icons-pack (License: https://creativecommons.org/licenses/by/3.0/) (modified)
+windy.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+storm.png -> https://opengameart.org/content/lightning-cloud-0
+snowfall.png -> https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
